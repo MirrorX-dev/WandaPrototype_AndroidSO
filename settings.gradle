@@ -1,0 +1,26 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://jcenter.bintray.com' }
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                // Do not change the username below.
+                // This should always be `mapbox` (not your username).
+                username = "mapbox"
+                // Use the secret token you stored in gradle.properties as the password
+                password = "sk.eyJ1IjoiamJkZXZlbG9wZXIiLCJhIjoiY2wybTZ1dm45MGRoZzNkbWFkd2w5dWhxNCJ9.zninWyX_vpWo68WKTyX4qA"
+            }
+        }
+    }
+}
+rootProject.name = "JSOUPTesting"
+include ':app'
