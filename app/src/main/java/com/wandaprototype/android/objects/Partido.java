@@ -1,4 +1,4 @@
-package com.camara.jsouptesting;
+package com.wandaprototype.android.objects;
 
 import java.util.ArrayList;
 

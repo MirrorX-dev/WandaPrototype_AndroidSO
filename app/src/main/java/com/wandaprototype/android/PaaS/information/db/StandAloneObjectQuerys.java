@@ -1,8 +1,11 @@
-package com.camara.jsouptesting;
+package com.wandaprototype.android.PaaS.information.db;
 
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
+
+import com.wandaprototype.android.dataformat.DameFecha;
+import com.wandaprototype.android.objects.Partido;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;

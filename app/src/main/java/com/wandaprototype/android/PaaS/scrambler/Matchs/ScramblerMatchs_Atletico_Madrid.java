@@ -1,4 +1,4 @@
-package com.camara.jsouptesting;
+package com.wandaprototype.android.PaaS.scrambler.Matchs;
 
 import android.os.Build;
 
@@ -14,6 +14,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.wandaprototype.android.objects.Partido;
 import com.google.common.collect.Lists;
 
 public class ScramblerMatchs_Atletico_Madrid {

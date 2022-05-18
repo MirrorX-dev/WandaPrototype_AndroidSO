@@ -1,4 +1,4 @@
-package com.camara.jsouptesting;
+package com.wandaprototype.android.dataformat;
 
 import java.util.StringTokenizer;
 import java.sql.Date;

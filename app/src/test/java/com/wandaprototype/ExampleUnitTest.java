@@ -1,4 +1,4 @@
-package com.camara.jsouptesting;
+package com.wandaprototype;
 
 import org.junit.Test;
 

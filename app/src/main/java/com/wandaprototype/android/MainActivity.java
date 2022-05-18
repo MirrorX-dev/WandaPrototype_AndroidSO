@@ -1,8 +1,7 @@
-package com.camara.jsouptesting;
+package com.wandaprototype.android;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -11,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,15 +23,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-//GoogleMaps:
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
 //MapBox:
+import com.wandaprototype.R;
+import com.wandaprototype.android.PaaS.information.db.StandAloneObjectQuerys;
+import com.wandaprototype.android.PaaS.scrambler.Matchs.ScramblerMatchs_Atletico_Madrid;
+import com.wandaprototype.android.objects.Partido;
 import com.mapbox.maps.MapView;
 import com.mapbox.maps.Style;
 

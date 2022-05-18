@@ -22,5 +22,5 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "JSOUPTesting"
+rootProject.name = "WandaPrototype"
 include ':app'
