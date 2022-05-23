@@ -1,18 +1,44 @@
 package com.wandaprototype.android.objects;
 
-import java.util.ArrayList;
+import android.content.ContentValues;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.util.ArrayList;
+/**
+ * Entidad "Partido"
+ */
+@Entity(tableName = "partido")
 public class Partido {
 	
 	public static ArrayList<Partido> partidos = new ArrayList<Partido>();
-	
+
+	@PrimaryKey
+	@NonNull
 	public String id_partido;
+	@ColumnInfo(name = "idpartido")
+	@NonNull
 	public String competicion;
+	@ColumnInfo(name = "elocal")
+	@NonNull
 	public String equipolocal;
+	@ColumnInfo(name = "evisit")
+	@NonNull
 	public String equipovisitante;
+	@ColumnInfo(name = "contenido")
+	@NonNull
 	public String jornada;
+	@ColumnInfo(name = "fpartido")
+	@NonNull
 	public String fechapartido;
+	@ColumnInfo(name = "hpartido")
+	@NonNull
 	public String horapartido;
+	@ColumnInfo(name = "epartido")
+	@NonNull
 	public String estadiopartido;
 	
 	public static ArrayList<Partido> getPartidos() {
@@ -89,13 +115,9 @@ public class Partido {
 		this.horapartido = horapartido;
 		this.estadiopartido = estadiopartido;
 	}
-	
+
 	public Partido() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
-	
+
 }

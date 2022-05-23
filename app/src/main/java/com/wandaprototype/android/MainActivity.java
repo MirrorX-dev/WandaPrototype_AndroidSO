@@ -19,25 +19,27 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
-
-//MapBox:
-import com.wandaprototype.R;
-import com.wandaprototype.android.PaaS.information.db.StandAloneObjectQuerys;
-import com.wandaprototype.android.PaaS.scrambler.Matchs.ScramblerMatchs_Atletico_Madrid;
-import com.wandaprototype.android.objects.Partido;
 import com.mapbox.maps.MapView;
 import com.mapbox.maps.Style;
-
-//Calendar
 import com.shrikanthravi.collapsiblecalendarview.data.Day;
 import com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar;
+import com.wandaprototype.R;
+import com.wandaprototype.android.IaaS.information.db.DbManagerSSH;
+import com.wandaprototype.android.PaaS.information.db.PartidoLab;
+import com.wandaprototype.android.dataformat.DameFecha;
+import com.wandaprototype.android.objects.Partido;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.StringTokenizer;
 
-//public class MainActivity extends AppCompatActivity implements OnMapReadyCallback  {
 public class MainActivity extends AppCompatActivity  {
+    //Fields
     private TextView jornadaTextView;
     private TextView equipolocalTextView;
     private TextView vs_separadorTextView;
@@ -45,12 +47,18 @@ public class MainActivity extends AppCompatActivity  {
     private TextView fechaTextView;
     private TextView hora_separador_TextView;
     private TextView horaTextView;
+
+    //Arrays : Elementos listados
     private ArrayList<String> arrayList;
     private ArrayAdapter<String> adapter;
-    //private GoogleMap mMap;
+
+    //Mapbox
     private MapView mapView = null;
     private CollapsibleCalendar collapsibleCalendar;
 
+    //Room
+    private PartidoLab mPartidoLab;
+    private Partido mPartido;
 
     @SuppressLint({"ResourceAsColor", "ResourceType"})
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -65,7 +73,6 @@ public class MainActivity extends AppCompatActivity  {
         //Elementos Scrambler:
         Content content = new Content();
         content.execute();
-        Toast.makeText(this, "Recopilando", Toast.LENGTH_LONG).show();
 
         ListView listView = (ListView) findViewById(R.id.listv);
         String[] items = {};
@@ -77,20 +84,8 @@ public class MainActivity extends AppCompatActivity  {
         //Maps load.
         mapView = findViewById(R.id.mapView);
         mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_DAY);
-        //mapView.getMapboxMap().loadStyleUri("mapbox://styles/jbdeveloper/cl2m84iwv002o14qxou66cpvr");
-        //mapbox://styles/jbdeveloper/cl2m84iwv002o14qxou66cpvr
-
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        // Comentado debido a uso de otras herramientas.
-        /*
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-         */
 
         //Calendar.
-        //collapsibleCalendar.findViewById(R.id.calendarView);
         final CollapsibleCalendar collapsibleCalendar = findViewById(R.id.calendarView);
         View calendarIcon = collapsibleCalendar.getRootView().findViewById(R.id.today_icon);
 
@@ -125,6 +120,8 @@ public class MainActivity extends AppCompatActivity  {
             public void onWeekChange(int i) {
             }
         });
+
+
     }
 
 
@@ -170,24 +167,6 @@ public class MainActivity extends AppCompatActivity  {
         super.onPostResume();
     }
 
-    // Uso de mapas de Google.
-    /*
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng wanda = new LatLng(40.436362876100354, -3.5994575206557715);
-        mMap.addMarker(new MarkerOptions()
-                .position(wanda)
-                .title("Marker in Wanda"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(wanda));
-        mMap.moveCamera(CameraUpdateFactory.zoomTo(14));
-        mMap.setIndoorEnabled(true);
-        mMap.setTrafficEnabled(true);
-        mMap.setMinZoomPreference(14);
-    }
-     */
 
 
     private class Content extends AsyncTask<Void, Void, Void> {
@@ -201,15 +180,59 @@ public class MainActivity extends AppCompatActivity  {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                //if.
-                if (Partido.partidos.size()==0) {
-                    new ScramblerMatchs_Atletico_Madrid().ExtractDataFromURL();
-                    new ScramblerMatchs_Atletico_Madrid().ExtractFirstDatedMatchFromURL();
-                    new ScramblerMatchs_Atletico_Madrid().IdentifDatosParticionados();
-                    new ScramblerMatchs_Atletico_Madrid().ClasifDatosFirstDatedMatch();
-                    new ScramblerMatchs_Atletico_Madrid().ClasifDatos();
-                    new ScramblerMatchs_Atletico_Madrid().LecturaDatosParticionadosSimple();
-                    new ScramblerMatchs_Atletico_Madrid().agregarCamposConfirmardos();
+                try {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                        File f = new File(getCacheDir()+"/ssh.key");
+                        if (!f.exists()) try {
+
+                            InputStream is = getAssets().open("ssh.key");
+                            int size = is.available();
+                            byte[] buffer = new byte[size];
+                            is.read(buffer);
+                            is.close();
+
+
+                            FileOutputStream fos = new FileOutputStream(f);
+                            fos.write(buffer);
+                            fos.close();
+                        } catch (Exception e) { throw new RuntimeException(e); }
+                        String path = f.getPath();
+                        System.out.println("***Pruebas***. "+path);
+                        new DbManagerSSH().checkConnection(path);
+                        new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
+                        System.out.println("***Pruebas***. "+Partido.partidos);
+
+                        /**
+                         * Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.
+                         * En Pruebas.
+                         */
+                        mPartidoLab = PartidoLab.get(MainActivity.this);
+                        List<Partido> partidos = mPartidoLab.getPartidos();
+
+                        for (int i=0; i<Partido.partidos.size(); i++) {
+                            for (int a=0; a<partidos.size(); a++) {
+                                if (!partidos.get(a).id_partido.equals(Partido.partidos.get(i).id_partido)) {
+                                    mPartido = new Partido();
+                                    mPartido.setId_partido(Partido.partidos.get(i).id_partido);
+                                    mPartido.setCompeticion(Partido.partidos.get(i).competicion);
+                                    mPartido.setEquipolocal(Partido.partidos.get(i).equipolocal);
+                                    mPartido.setEquipovisitante(Partido.partidos.get(i).equipovisitante);
+                                    mPartido.setJornada(Partido.partidos.get(i).jornada);
+                                    mPartido.setFechapartido(Partido.partidos.get(i).fechapartido);
+                                    mPartido.setHorapartido(Partido.partidos.get(i).horapartido);
+                                    mPartido.setEstadiopartido(Partido.partidos.get(i).estadiopartido);
+                                    mPartidoLab.addPartido(mPartido);
+                                }
+                            }
+                        }
+
+                        for (int i=0; i<partidos.size(); i++) {
+                            Log.e("Lectura", String.valueOf(partidos.get(i)));
+                        }
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -221,53 +244,27 @@ public class MainActivity extends AppCompatActivity  {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            try {
-                if (isNetworkAvailable() != false) {
-                    jornadaTextView.setText(Partido.partidos.get(StandAloneObjectQuerys.ObtenerDatosPartido_MasCercano2()).competicion);
-                    equipolocalTextView.setText(Partido.partidos.get(StandAloneObjectQuerys.ObtenerDatosPartido_MasCercano2()).equipolocal);
-                    vs_separadorTextView.setText("VS");
-                    equipovisitanteTextView.setText(Partido.partidos.get(StandAloneObjectQuerys.ObtenerDatosPartido_MasCercano2()).equipovisitante);
-                    fechaTextView.setText(Partido.partidos.get(StandAloneObjectQuerys.ObtenerDatosPartido_MasCercano2()).fechapartido);
-                    hora_separador_TextView.setText(" a las ");
-                    horaTextView.setText(Partido.partidos.get(StandAloneObjectQuerys.ObtenerDatosPartido_MasCercano2()).horapartido);
-
-                    StandAloneObjectQuerys.ObtenerDatosPartidos_MasCercanos2();
-                    for (int i = 0; i < StandAloneObjectQuerys.identificadores.size(); i++) {
-                        adapter.add(
-                                Partido.partidos.get(StandAloneObjectQuerys.identificadores.get(i)).fechapartido + " | "
-                                        + Partido.partidos.get(StandAloneObjectQuerys.identificadores.get(i)).competicion + " | "
-                                        + Partido.partidos.get(StandAloneObjectQuerys.identificadores.get(i)).jornada);
-                    }
-
-                    StandAloneObjectQuerys.ObtenerDatosPartidos_MasCercanos();
-                    for (int i = 0; i < StandAloneObjectQuerys.identificadores.size(); i++) {
-                        StringTokenizer st = new StringTokenizer(Partido.partidos.get(StandAloneObjectQuerys.identificadores.get(i)).fechapartido, "/");
-                        String dia = st.nextToken();
-                        String mes = st.nextToken();
-                        String anho = st.nextToken();
-                        final CollapsibleCalendar collapsibleCalendar = findViewById(R.id.calendarView);
-                        collapsibleCalendar.addEventTag(Integer.valueOf(anho), Integer.valueOf(mes)-1, Integer.valueOf(dia));
-                    }
-                    adapter.notifyDataSetChanged();
-
-
-                }
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            } finally {
-                StandAloneObjectQuerys.LimpiarListaIdentificadores();
-            }
         }
     }
 
+
+    /**
+     * Podemos utilizar onStop para finalizar todas las comunicaciones
+     * o eliminar archivos en memoria caché.
+     */
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onStop() {
         super.onStop();
-        //Partido.partidos.clear();
-        //StandAloneObjectQuerys.LimpiarListaIdentificadores();
     }
 
+
+    /**
+     * Utilizamos onResume para cargar de nuevos los datos, realizaremos el procedimiento inicial
+     * para comprobar actualizaciones de los datos respetando si existe una conexión/ entre otros
+     * bloques para su funcionamiento
+     * TODO: Realizar funciones con onRestart
+     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -278,22 +275,75 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
+
+    /**
+     * Comprueba la conexión del cliente a través de los servicios de conectividad de Android.
+     * Ya sean servicios que permitan recibir acceso a internet mediante Wifi ó datos moviles.
+     * TODO: Probar que funciona conectado a redes sin acceso a internet.
+     * @return Devuelve el estado de la red, false=No hay conexión y true= Si hay Conexión.
+     */
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         @SuppressLint("MissingPermission") NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
+    /**
+     * Permite comprobar la conexión, recargar los datos al entrar/salir/restaurar
+     * la aplicación con el fin de proporcionar datos actualizados.
+     */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void recargarDatos() {
+        mPartidoLab = PartidoLab.get(MainActivity.this);
         if (isNetworkAvailable()==false) {
-            jornadaTextView.setText("");
-            equipolocalTextView.setText("");
-            vs_separadorTextView.setText("");
-            equipovisitanteTextView.setText("Sin conexión a internet");
-            fechaTextView.setText("");
-            hora_separador_TextView.setText("");
-            horaTextView.setText("");
+            //List<Partido> partidos = mPartidoLab.getPartidos();
+            Partido partidos =  mPartidoLab.getMoreRecentPartido();
+            jornadaTextView.setText(partidos.getJornada());
+            equipolocalTextView.setText(partidos.equipolocal);
+            vs_separadorTextView.setText("VS");
+            equipovisitanteTextView.setText(partidos.equipovisitante);
+            fechaTextView.setText(String.valueOf(new DameFecha().dameDateAqui(Date.valueOf(partidos.fechapartido))));
+            hora_separador_TextView.setText("a las");
+            horaTextView.setText(partidos.horapartido);
+            recargarLista();
+        } else {
+            /**
+             * Comprobar versión de la bbdd local y externa:
+             */
+            //List<Partido> partidos = mPartidoLab.getPartidos();
+            Partido partidos =  mPartidoLab.getMoreRecentPartido();
+            jornadaTextView.setText(partidos.getJornada());
+            equipolocalTextView.setText(partidos.equipolocal);
+            vs_separadorTextView.setText("VS");
+            equipovisitanteTextView.setText(partidos.equipovisitante);
+            fechaTextView.setText(String.valueOf(new DameFecha().dameDateAqui(Date.valueOf(partidos.fechapartido))));
+            hora_separador_TextView.setText("a las");
+            horaTextView.setText(partidos.horapartido);
+            recargarLista();
         }
+    }
+
+
+    public void recargarLista() {
+        mPartidoLab = PartidoLab.get(MainActivity.this);
+        List<Partido> partidos_sel3 = mPartidoLab.getMoreRecentPartidos_limit3();
+        List<Partido> partidos_sel6 = mPartidoLab.getMoreRecentPartidos_limit6();
+
+        for (int i = 0; i < partidos_sel3.size(); i++) {
+            adapter.add(
+                    partidos_sel3.get(i).fechapartido + " | "
+                            + partidos_sel3.get(i).competicion + " | "
+                            + partidos_sel3.get(i).jornada);
+        }
+
+        for (int i = 0; i < partidos_sel6.size(); i++) {
+            StringTokenizer st = new StringTokenizer(partidos_sel6.get(i).fechapartido, "-");
+            String anho = st.nextToken();
+            String mes = st.nextToken();
+            String dia = st.nextToken();
+            final CollapsibleCalendar collapsibleCalendar = findViewById(R.id.calendarView);
+            collapsibleCalendar.addEventTag(Integer.valueOf(anho), Integer.valueOf(mes)-1, Integer.valueOf(dia));
+        }
+        adapter.notifyDataSetChanged();
     }
 }
