@@ -21,6 +21,9 @@ public interface PartidoDAO {
         @Query("SELECT * FROM partido WHERE id_partido LIKE :idbuscando")
         Partido getPartido(String idbuscando);
 
+        @Query("SELECT * FROM partido WHERE id_partido = :id")
+        int isDataExist(String id);
+
         @Query("select * from partido where fpartido>=DATE() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido LIMIT 1")
         Partido getMoreRecentPartido();
 

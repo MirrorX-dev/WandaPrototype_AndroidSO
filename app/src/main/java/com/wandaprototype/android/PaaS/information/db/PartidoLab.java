@@ -1,5 +1,8 @@
 package com.wandaprototype.android.PaaS.information.db;
 
+import static com.wandaprototype.android.PaaS.information.db.PartidoDatabase.MIGRATION_1_2;
+import static com.wandaprototype.android.PaaS.information.db.PartidoDatabase.MIGRATION_2_3;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 
@@ -24,6 +27,9 @@ public class PartidoLab {
     private PartidoLab(Context context) {
         Context appContext = context.getApplicationContext();
         PartidoDatabase database = Room.databaseBuilder(appContext, PartidoDatabase.class, "partido")
+                //.fallbackToDestructiveMigration()
+                .addMigrations(MIGRATION_1_2)
+                .addMigrations(MIGRATION_2_3)
                 .allowMainThreadQueries().build();
         mPartidoDao = database.getPartidoDao();
     }
@@ -41,6 +47,10 @@ public class PartidoLab {
 
     public Partido getPartido(String id) {
         return mPartidoDao.getPartido(id);
+    }
+
+    public int isDataExist(String id) {
+       return mPartidoDao.isDataExist(id);
     }
 
     public Partido getPartidosByStadium(String estadio) {

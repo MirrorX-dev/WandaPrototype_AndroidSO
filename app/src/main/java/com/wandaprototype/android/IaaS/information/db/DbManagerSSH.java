@@ -10,6 +10,7 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.wandaprototype.android.objects.Partido;
+import com.wandaprototype.android.objects.PartidoVersions;
 
 import org.apache.commons.dbutils.DbUtils;
 
@@ -40,10 +41,6 @@ public class DbManagerSSH {
 	private static String knownHostPublicKey = "158.101.98.158 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDTULimuMguOvnMBPqaCbD7me4622EHZUMteOhOcKmP/puHSGFFDbXegEizQ1nJRng3coxt7lk+VYQXtmxECDuvyLvOCPng47jWttOD5ppST6xkrTquUqTwBQmnIgRPQ322KFuuL5yzr6BlzzrzlhlGGX8gsCmqzfUXMo5Pof7nXhVKl4dMIczeLeCREv9r4PCMtzLRKAI/d0Of7i/Bhfs1IYMlpTRBq3SxUoZOgRMfpo/ONyOoTIBKTWJRFPj4mf/laRv73BgnlkQzlaRCXR6Ytb3qI7CCz6ktWh53t9w0kI5wDFQiJBSQSJD74WtTSzVEIk+vYqNDjPcir0H2Br5e3Z7hPkJa4hqPNvP4CQRz9ntua/LLY5ELZrZiys2blCd1P0Fs/ZK44XLEXjkAezZ12ymjx3v+UyY1cXhhTZ34+uq8nDsJNc4jfBhH6XrgEjkv2sZZBd/rA9estQ3A+IXvwMQu9dx/il3DveMvkd77Wu9HlwUZ0Idts0Bb6l0L1Jk=";
 			//System.getenv("SSH_Connections_Public_Key");
 
-	private static String public_key = "AAAAB3NzaC1yc2EAAAADAQABAAABAQCitL6nTS0wFx6R2JQdA62yC4KrfJa27oUEVzQAEBVMV/CZW/2jyRchAsi4qPR1zwXq0eolyJxMH6VOXGM6dOzoiWfxGAkiQLV0N0VF9sHCjAfREf4p1ItQ0LIg53FdfWkvu9iRDrXyxTQwD4Jzhjhw/3HaUpsKWDVcsCt/RXh7om2cUD2NjpIGiWLpQRhmJDFd5J0Pna3R4MpJRVa7gu0vdP2Dgrf+VhuMC+fQBN/TiBMcQmNyduIOqRiDUnhzEpuPK1rcJWoo6FvR4XbNIlHNcA7kaRyIwR5fcX7qu7BZUabyaPxLzFlxC8kKaTX2keCVCwVJmIXxCiiIG/B/vMav";
-	private static String private_key = "-----BEGIN RSA PRIVATE KEY-----MIIEogIBAAKCAQEAorS+p00tMBcekdiUHQOtsguCq3yWtu6FBFc0ABAVTFfwmVv9o8kXIQLIuKj0dc8F6tHqJcicTB+lTlxjOnTs6Iln8RgJIkC1dDdFRfbBwowH0RH+KdSLUNCyIOdxXX1pL7vYkQ618sU0MA+Cc4Y4cP9x2lKbClg1XLArf0V4e6JtnFA9jY6SBoli6UEYZiQxXeSdD52t0eDKSUVWu4LtL3T9g4K3/lYbjAvn0ATf04gTHEJjcnbiDqkYg1J4cxKbjyta3CVqKOhb0eF2zSJRzXAO5GkciMEeX3F+6ruwWVGm8mj8S8xZcQvJCmk19pHglQsFSZiF8QooiBvwf7zGrwIDAQABAoIBAAaZo2RA/rTFM1HCQdvdctXWnrHbJ3f7O/0dlnfsLxj+Nj3aW/MhbKVDqiXHgMcoozpP0po+xYxW+ksv9zx/Ur7qGAPRMEmp61JwDYjVhi2gpY6HFtLWkuIv3RH1oYUj2bj8e0ADI0FaW5AZiParuq1mx1UOZcipJF0CrnkGtej58L5avbufpQofNa4BdQ2KUMFU69cAgkNx3cX0R3ZmWKz4miqLZJsELT5xoLveArLbaR4dzf+4imwnJ2bfqomxOc+tv/or7iPQhqGD8b8GUUIG17MDcYzKEm/OTAjIEo8YR59CDf9XJm4wfghXFY9xVrBj73ZKuKpUo5ZFtkN05YUCgYEAzbN+9MZl79GGAKonRw8oU+4qsbJak6HUTm20lKfJraJTUEpO+Try8Zi5ZKlWLe+oqcK+SPD9VECwb3m80Ptze3Qm8uG2jU0Gvt/BAsmvErL3WiWTN51bpRahT2dmureJ6NMFuAQhDUl3BXf1zBpsjGuV+jGfEmGvsb8mLL+Z1FUCgYEAyn3V2ZIEBp3zXqmvpZ9EDsX9Ty5t4TvVF99phqVXBSp/sgYo/mxC7ZwwEdxRtz9LT/kuModkpOWOZML+bnltAOpJPfP9fl666GOOD0rAHFsftTFRAEsBZs68pzM0SGGdfxgNZSy9kUL8BNP34HHMPkfsLKFq8Ga8Ww+D8MzhUvMCgYAeM1pSacaRnTuFYXX+0tTi7bbK/BqcTkgzc5vtr2zG12xP/3j00pjUq82cX9hNSkCDHBp/7xHiitTcqQz1ydU8rOMDCeyZdlOlNojJ9f6ESk5Sp+2jXrET3ey1EcNdapEO49yVFdYcc0rMPL6TxtVlEG6mmx51vm3jNONP8pmNOQKBgHAisXu0XeBgNjc1Fx1MDr9zq2zfFGCH5uE6itDS3VbyCxdGTAthXssBFKm/bc1iEs3t+0RmMDkVGv738Tiyq8e29uqFJNuHkFBDWZdkWPEbEXshHW9hGhyZ3mVleM2gqTyJ0Fk4Jp68Dp6J2BqGSoovAD5TAcqxyhtPg0yl2R47AoGAEu/MHBmccp9JiylYnshpqnFpquv3ShOPwxzSDsMg9n0QWkMPw+NYW4NuqESWP9FT0yk52oidvr8Cd5685lGeZWvJx478/wv6dtU5AGnZDwgOmUWTE+xw0dKDzMXL9qU+WaYFVElFz8d+TaSPE0E2KCsw2y+7IgVkLasbWDasnlk=-----END RSA PRIVATE KEY-----";
-	private static String passphrase_key = "";
-
 	private static PreparedStatement ps = null;
 	private static Statement st = null;
 	private static ResultSet rs = null;
@@ -63,10 +60,6 @@ public class DbManagerSSH {
 
 		JSch jsch = new JSch();
 		jsch.setKnownHosts(new ByteArrayInputStream(knownHostPublicKey.getBytes()));
-		//jsch.addIdentity("./com/wandaprototype/android/IaaS/information/db/ssh.key");
-		//jsch.addIdentity("/data/data/com.wandaprototype/files/ssh.key");
-
-
 		jsch.addIdentity(file);
 
 		session = jsch.getSession(jumpserverUsername, jumpserverHost);
@@ -285,7 +278,6 @@ public class DbManagerSSH {
 	}
 	
 	public void DefinirObjetoPartido(String table) {
-		
 		String query = "SELECT * FROM wandaprototype." + table +"";
 		try {
 			Statement st = con.createStatement();
@@ -302,6 +294,23 @@ public class DbManagerSSH {
 						rs.getString("horapartido"),
 						rs.getString("estadiopartido"));
 				Partido.partidos.add(p);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void DefinirObjetoPartidoVersiones(String table) {
+		String query = "SELECT * FROM wandaprototype." + table +"";
+		try {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(query);
+
+			while (rs.next()) {
+				PartidoVersions p = new PartidoVersions(
+						rs.getInt("version_number"),
+						rs.getString("version_date"));
+				PartidoVersions.partidosVersions.add(p);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
