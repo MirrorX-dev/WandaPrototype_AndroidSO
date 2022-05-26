@@ -277,9 +277,8 @@ public class MainActivity extends AppCompatActivity  {
                              */
                             mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
                             List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();
-                            if (
-                                    PartidoVersions.partidosVersions.size()<=0
-                                            && new DbManagerSSH().ComprobarUltimaVersion(partidosVersions.get(partidosVersions.size() - 1).version_number,
+                            if (PartidoVersions.partidosVersions.size()<=0
+                                            || new DbManagerSSH().ComprobarUltimaVersion(partidosVersions.get(partidosVersions.size() - 1).version_number,
                                     Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")) {
                                 mPartidoLab.setPartidosNuke();
                                 new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
