@@ -81,6 +81,15 @@ public class MainActivity extends AppCompatActivity  {
         setSupportActionBar(findViewById(R.id.myToolbar));
 
         /**
+         * Instancia de Tablas correspondientes a usar
+         * en esta actividad de Android:
+         * Partidos ==> Si cambia de estadio se utiliza el mismo.
+         * PartidosVersiones ==> Misma acción.
+         */
+        mPartidoLab = PartidoLab.get(MainActivity.this);
+        mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
+
+        /**
          * Instancia una lista de elementos, permite añadir a la lista información
          * de los eventos que tengamos disponibles.
          * Aplica cambios en la lista notificando que los datos han cambiando al adaptador.
@@ -217,6 +226,8 @@ public class MainActivity extends AppCompatActivity  {
      * Recopila información de servidor mediante un tunel seguro SSH.
      * Realiza las consultas correspondientes.
      * ¡Atención, no finaliza la conexión ni el tunel SSH!
+     * TODO: Resolver caso de no encontrar versión al comparar
+     * TODO: Error si no existen registros de versiones.
      */
     private void RetrieveDatafromServer() {
         AsyncTask.execute(new Runnable() {
@@ -224,94 +235,164 @@ public class MainActivity extends AppCompatActivity  {
             public void run() {
                 try {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                        File f = new File(getCacheDir()+"/ssh.key");
-                        if (!f.exists()) try {
-
-                            InputStream is = getAssets().open("ssh.key");
-                            int size = is.available();
-                            byte[] buffer = new byte[size];
-                            is.read(buffer);
-                            is.close();
-
-
-                            FileOutputStream fos = new FileOutputStream(f);
-                            fos.write(buffer);
-                            fos.close();
-                        } catch (Exception e) { throw new RuntimeException(e); }
-                        String path = f.getPath();
-                        System.out.println("***Pruebas***. "+path);
-                        new DbManagerSSH().checkConnection(path);
-
-
 
                         /**
-                         * Añadimos punto de control:
-                         * Comprobamos si mi versión local contiene la ultima versión
-                         * de partidosVersions interna y externa.
-                         * TODO: Actualizar datos al recuperar información nueva del servidor
-                         * TODO: Cerrar conexiones una vez finalizadas serie de consultas.
+                         * Recopila el archivo /ssh.key de la carpeta assets paquete interno:
+                         * TODO: Debe encriptarlo internamente.
+                         * Si no existe lo crea y gurada en cache:
                          */
-                        mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
-                        List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();
-                        if (new DbManagerSSH().ComprobarUltimaVersion(
-                                partidosVersions.get(partidosVersions.size() - 1).version_number,
-                                Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date),
-                                "wandametropolitano_versions")) {
-                            //Elimina los datos locales:
-                            mPartidoLab.setPartidosNuke();
-                            new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
-                            new DbManagerSSH().DefinirObjetoPartidoVersiones("wandametropolitano_versions");
-                            System.out.println("***Pruebas2***. "+PartidoVersions.partidosVersions);
+                        String path = null;
+                        File f = new File(getCacheDir()+"/ssh.key");
+                        if (!f.exists()) {
+                            try {
+                                InputStream is = getAssets().open("ssh.key");
+                                int size = is.available();
+                                byte[] buffer = new byte[size];
+                                is.read(buffer);
+                                is.close();
+
+                                FileOutputStream fos = new FileOutputStream(f);
+                                fos.write(buffer);
+                                path = f.getPath();
+                                fos.close();
+                            } catch (Exception e) {
+                                Log.e("WandaPrototype [ERROR]", "No se puede leer el fichero/permisos/localización");
+                                throw new RuntimeException(e);
+                            }
+                        }
+
+                        path = f.getPath();
+                            Log.i("WandaPrototype [INFO]", String.valueOf("Ruta de información de la clave privada: "+path));
+                            new DbManagerSSH().checkConnection(path);
 
                             /**
-                             * Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.
-                             * En Pruebas.
+                             * Añadimos punto de control:
+                             * Comprobamos si mi versión local contiene la ultima versión
+                             * de partidosVersions interna y externa.
+                             * Si no contiene ninguna versión procedemos a obtener los datos.
+                             * TODO: Actualizar datos al recuperar información nueva del servidor
+                             * TODO: Cerrar conexiones una vez finalizadas serie de consultas.
+                             *
+                             * TODO: Debe borrar también los listados y el calendario para evitar confusiones.!!!!
                              */
-                            mPartidoLab = PartidoLab.get(MainActivity.this);
-                            List<Partido> partidos = mPartidoLab.getPartidos();
+                            mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
+                            List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();
+                            if (
+                                    PartidoVersions.partidosVersions.size()<=0
+                                            && new DbManagerSSH().ComprobarUltimaVersion(partidosVersions.get(partidosVersions.size() - 1).version_number,
+                                    Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")) {
+                                mPartidoLab.setPartidosNuke();
+                                new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
+                                new DbManagerSSH().DefinirObjetoPartidoVersiones("wandametropolitano_versions");
 
-                            for (int i=0; i<Partido.partidos.size(); i++) {
-                                if (mPartidoLab.isDataExist(Partido.partidos.get(i).id_partido) == 0) {
-                                    mPartido = new Partido();
-                                    mPartido.setId_partido(Partido.partidos.get(i).id_partido);
-                                    mPartido.setCompeticion(Partido.partidos.get(i).competicion);
-                                    mPartido.setEquipolocal(Partido.partidos.get(i).equipolocal);
-                                    mPartido.setEquipovisitante(Partido.partidos.get(i).equipovisitante);
-                                    mPartido.setJornada(Partido.partidos.get(i).jornada);
-                                    mPartido.setFechapartido(Partido.partidos.get(i).fechapartido);
-                                    mPartido.setHorapartido(Partido.partidos.get(i).horapartido);
-                                    mPartido.setEstadiopartido(Partido.partidos.get(i).estadiopartido);
-                                    mPartidoLab.addPartido(mPartido);
+                                /**
+                                 * Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.
+                                 * En Pruebas.
+                                 */
+                                mPartidoLab = PartidoLab.get(MainActivity.this);
+                                for (int i=0; i<Partido.partidos.size(); i++) {
+                                    if (mPartidoLab.isDataExist(Partido.partidos.get(i).id_partido) == 0) {
+                                        mPartido = new Partido();
+                                        mPartido.setId_partido(Partido.partidos.get(i).id_partido);
+                                        mPartido.setCompeticion(Partido.partidos.get(i).competicion);
+                                        mPartido.setEquipolocal(Partido.partidos.get(i).equipolocal);
+                                        mPartido.setEquipovisitante(Partido.partidos.get(i).equipovisitante);
+                                        mPartido.setJornada(Partido.partidos.get(i).jornada);
+                                        mPartido.setFechapartido(Partido.partidos.get(i).fechapartido);
+                                        mPartido.setHorapartido(Partido.partidos.get(i).horapartido);
+                                        mPartido.setEstadiopartido(Partido.partidos.get(i).estadiopartido);
+                                        mPartidoLab.addPartido(mPartido);
+                                    }
                                 }
+
+                                /**
+                                 * Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.
+                                 * En Pruebas.
+                                 */
+                                for (int i=0; i<PartidoVersions.partidosVersions.size(); i++) {
+                                    mPartidoVersions = new PartidoVersions();
+                                    mPartidoVersions.setVersion_number(PartidoVersions.partidosVersions.get(i).version_number);
+                                    mPartidoVersions.setVersion_date(PartidoVersions.partidosVersions.get(i).version_date);
+                                    mPartidoVersionsLab.addPartidoVersions(mPartidoVersions);
+                                }
+
+                                /**
+                                 * Limpia y elimina lo lista y datos en el calendario
+                                 *
+                                 */
+                                ReloadListView();
+
+                                /**
+                                 * Una vez finalice las tareas anteriores es necesario
+                                 * llamar a las funciones para actualizar los datos
+                                 * antes de finalizar el hilo de fondo.
+                                 */
+                                RetrieveUIData();
+
+                            } else {
+                                Log.i("WandaPrototype [INFO]", "No se han encontrado versiones nuevas");
+                                Log.i("WandaPrototype [INFO]", String.valueOf(partidosVersions));
+                                System.out.println("Información Extra: "+partidosVersions.get(partidosVersions.size() - 1).version_number);
+
+                                ReloadListView();
+                                RetrieveUIData();
                             }
 
                             /**
-                             * Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.
-                             * En Pruebas.
+                             * Cierra todas las conexiones. En caso de restaurar la App. No permite
+                             * reutilizar el mismo canal SSH.
+                             * TODO: Mantener SSH activo hasta finalizar App.
                              */
-                            //Inicializado arriba: mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
-                            //List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();
+                            new DbManagerSSH().CloseDataBaseConnection();
+                            new DbManagerSSH().CloseSSHConnection();
 
-                            for (int i=0; i<PartidoVersions.partidosVersions.size(); i++) {
-                                mPartidoVersions = new PartidoVersions();
-                                mPartidoVersions.setVersion_number(PartidoVersions.partidosVersions.get(i).version_number);
-                                mPartidoVersions.setVersion_date(PartidoVersions.partidosVersions.get(i).version_date);
-                                mPartidoVersionsLab.addPartidoVersions(mPartidoVersions);
-                            }
-                        } else {
-                            System.out.println("Ni hay novedades");
-                        }
-
-                        System.out.println("Versiones: "+partidosVersions);
-                        for (int i=0; i<partidosVersions.size(); i++) {
-                            System.out.println("Versiones: "+partidosVersions.get(i));
-                        }
+                        //} else {
+                            //Log.e("WandaPrototype [ERROR]", "No existe el archivo .key");
+                            //Log.e("WandaPrototype [ERROR]", String.valueOf("Ruta de información de la clave privada: "+path));
+                            //throw new Exception("El archivo de acceso .key no existe");
+                        //}
+                    } else {
+                        Log.e("WandaPrototype [ERROR]", "Build.VERSION.SDK Es menor que el sistema");
+                        throw new Exception("La versión SDK está desactualizada");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
+                    Log.i("WandaPrototype [ERROR]", "Error durante el procesado de datos");
                 }
             }
         });
+    }
+
+    public void RetrieveUIData() {
+        runOnUiThread(new Runnable() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void run() {
+                //TODO: Observador en el cambio de la información.
+                //TODO: https://medium.com/mindorks/using-room-database-with-livedata-android-jetpack-cbf89b677b47
+                //TODO: https://developer.android.com/topic/libraries/architecture/livedata?hl=es-419
+
+                //Si no se estancian al comenzar la actividad. Devuelve valor nulo.
+                mPartidoLab = PartidoLab.get(MainActivity.this);
+                mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
+                if (!(mPartidoLab.getMoreRecentPartidos_limit6().isEmpty())) {
+                    MostrarDatosRecientes();
+                    MostrarDatosLista();
+                    MostrarDatosCalendario();
+                    System.out.println(mPartidoVersionsLab.getPartidoVersionDao());
+                    System.out.println(adapter);
+                } else {
+                    jornadaTextView.setText("No hay ningún próximo evento");
+                    equipolocalTextView.setText("Ningún evento cercano ha sido confirmado");
+                    vs_separadorTextView.setText("Vuelve pronto ;)");
+                    equipovisitanteTextView.setText("");
+                    fechaTextView.setText("");
+                    hora_separador_TextView.setText("");
+                    horaTextView.setText("");
+                }
+            }
+        });
+
     }
 
 
@@ -331,19 +412,23 @@ public class MainActivity extends AppCompatActivity  {
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void FlujoPrincipal() {
+        mPartidoLab = PartidoLab.get(MainActivity.this);
         if (isNetworkAvailable()) {
-            if (isEmptyPartidos()==true) {
+            if (isEmptyPartidos()) {
+                //TODO: Debe abrir un único canal SSH o cerrar la conexión.
+                //TODO: No recarga los datos bucar medio.
+                //TODO: Debe formatear la tabla.
+                MostrarSinDatosConConexion();
                 RetrieveDatafromServer();
-                MostrarDatosRecientes();
-                MostrarDatosLista();
-                MostrarDatosCalendario();
             } else {
-                MostrarDatosRecientes();
-                MostrarDatosLista();
-                MostrarDatosCalendario();
+                //TODO: Debe abrir un único canal SSH o cerrar la conexión.
+                //TODO: No recarga los datos bucar medio.
+                //TODO: Debe formatear la tabla.
+                RetrieveUIData();
+                RetrieveDatafromServer();
             }
         } else {
-            if (isEmptyPartidos()==true) {
+            if (isEmptyPartidos()) {
                 MostrarSinDatos();
             } else {
                 MostrarDatosRecientes();
@@ -386,18 +471,25 @@ public class MainActivity extends AppCompatActivity  {
     /**
      * Establece la información en los campos Textview, recopilando los datos
      * de la base de datos local interna.
+     * SI la información recopilada no contiene ningún dato resulta en error
+     * de valor nulo. Comprobamos esta información y si se encuentra vacia,
+     * devolvemos un mensaje indicando que no hay ningun evento cercano.
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void MostrarDatosRecientes() {
-        mPartidoLab = PartidoLab.get(MainActivity.this);
+        //mPartidoLab = PartidoLab.get(MainActivity.this);
+        System.out.println("Último partido actual: "+mPartidoLab.getMoreRecentPartidos_limit6());
+
         Partido partidos =  mPartidoLab.getMoreRecentPartido();
-        jornadaTextView.setText(partidos.getJornada());
-        equipolocalTextView.setText(partidos.equipolocal);
-        vs_separadorTextView.setText("VS");
-        equipovisitanteTextView.setText(partidos.equipovisitante);
-        fechaTextView.setText(String.valueOf(new DameFecha().dameDateAqui(Date.valueOf(partidos.fechapartido))));
-        hora_separador_TextView.setText("a las");
-        horaTextView.setText(partidos.horapartido);
+        if (mPartidoLab.getMoreRecentPartido()!=null) {
+            jornadaTextView.setText(partidos.getJornada());
+            equipolocalTextView.setText(partidos.equipolocal);
+            vs_separadorTextView.setText("VS");
+            equipovisitanteTextView.setText(partidos.equipovisitante);
+            fechaTextView.setText(String.valueOf(new DameFecha().dameDateAqui(Date.valueOf(partidos.fechapartido))));
+            hora_separador_TextView.setText("a las");
+            horaTextView.setText(partidos.horapartido);
+        }
     }
 
     /**
@@ -412,6 +504,21 @@ public class MainActivity extends AppCompatActivity  {
         equipovisitanteTextView.setText("de datos móviles o");
         fechaTextView.setText("");
         hora_separador_TextView.setText("conexión Wi-Fi");
+        horaTextView.setText("");
+    }
+
+    /**
+     * Establece la información en los campos Textview.
+     * Detalle de posible error detectado, según flujo de funcionamiento.
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void MostrarSinDatosConConexion() {
+        jornadaTextView.setText("");
+        equipolocalTextView.setText("");
+        vs_separadorTextView.setText("¿Primera vez aquí?");
+        equipovisitanteTextView.setText("Ahora puedes usar datos sin conexión");
+        fechaTextView.setText("");
+        hora_separador_TextView.setText("[Recopilando ultimos datos]");
         horaTextView.setText("");
     }
 
@@ -451,6 +558,28 @@ public class MainActivity extends AppCompatActivity  {
             collapsibleCalendar.addEventTag(Integer.valueOf(anho), Integer.valueOf(mes)-1, Integer.valueOf(dia));
         }
         adapter.notifyDataSetChanged();
+    }
+
+    /**
+     * Realiza la limpieza de los listas
+     * los elementos antiguos o recargados
+     * se proceden a eliminar. Con la
+     * acción de proporcionar nueva
+     * información.
+     * TODO: Días del calendario antiguos no se quitan ojo!
+     */
+    public void ReloadListView() {
+        runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                // Stuff that updates the UI
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+
     }
 
 }
