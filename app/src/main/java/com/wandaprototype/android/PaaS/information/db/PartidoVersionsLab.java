@@ -41,4 +41,8 @@ public class PartidoVersionsLab {
         mPartidoVersionsDao.addPartidoVersions(partidoVersions);
     }
 
+    public void setPartidoVersionsNuke() {
+        mPartidoVersionsDao.setPartidoVersionsNuke();
+    }
+
 }

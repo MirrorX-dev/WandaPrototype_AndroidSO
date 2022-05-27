@@ -18,5 +18,8 @@ public interface PartidoVersionsDAO {
 
         @Insert(onConflict = OnConflictStrategy.IGNORE)
         void addPartidoVersions(PartidoVersions partidoVersions);
+
+        @Query("DELETE FROM partidoVersions")
+        void setPartidoVersionsNuke();
     }
 }

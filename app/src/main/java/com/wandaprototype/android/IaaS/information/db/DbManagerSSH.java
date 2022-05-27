@@ -9,6 +9,8 @@ import androidx.annotation.RequiresApi;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
+import com.wandaprototype.android.MainActivity;
+import com.wandaprototype.android.PaaS.information.db.PartidoVersionsLab;
 import com.wandaprototype.android.objects.Partido;
 import com.wandaprototype.android.objects.PartidoVersions;
 
@@ -253,7 +255,6 @@ public class DbManagerSSH {
 	 * basada en la fecha más reciente (tanto servidor/cliente).
 	 * El número de versión no es utilizado. Su uso es principalemente para la organización
 	 * de los datos.
-	 * @param miversion Debes especificar tu ultima versión de la bbdd interna.
 	 * @param mifecha Debes especificar tu ultima fecha de la bbdd interna.
 	 * @param table Debes especificar tu tabla referida al estadio.
 	 * @return
@@ -286,6 +287,30 @@ public class DbManagerSSH {
 		return output;
 	}
 
+
+	public int getUltimaNVersion(Timestamp mifecha, String table) {
+		int output = -1;
+		try {
+			int lastVersion = -1;
+			Timestamp lastDate = null;
+
+			String query = "SELECT * FROM wandaprototype." + table + " WHERE version_number=(SELECT MAX(version_number) FROM wandaprototype." + table + ")";
+			rs = st.executeQuery(query);
+			while (rs.next()) {
+				lastVersion = rs.getInt("version_number");
+				lastDate = rs.getTimestamp("version_date");
+				System.out.println(lastVersion);
+				System.out.println(lastDate);
+			}
+			if (lastDate.after(mifecha)) {
+				output = lastVersion;
+			}
+
+		} catch (Exception a) {
+			a.printStackTrace();
+		}
+		return output;
+	}
 	
 	public void DefinirObjetoPartido(String table) {
 		String query = "SELECT * FROM wandaprototype." + table +"";

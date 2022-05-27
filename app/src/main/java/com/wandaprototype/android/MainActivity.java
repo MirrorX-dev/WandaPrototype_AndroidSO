@@ -284,6 +284,15 @@ public class MainActivity extends AppCompatActivity  {
                             ) {
                                 mPartidoLab.setPartidosNuke();
                                 new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
+                                //TODO: Comprobar porque al recoger la versión más reciente con valor nulo, no crashea la App.
+                                //TODO: Limpia versiones si tabla de la bbdd externa ha sido formateada.
+                                if (partidosVersions.get(partidosVersions.size() - 1).version_number>
+                                                new DbManagerSSH().getUltimaNVersion(
+                                                        Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")
+                                ) {
+                                    mPartidoVersionsLab.setPartidoVersionsNuke();
+                                }
+
                                 new DbManagerSSH().DefinirObjetoPartidoVersiones("wandametropolitano_versions");
 
                                 /**
