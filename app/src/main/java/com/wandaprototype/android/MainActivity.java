@@ -228,6 +228,7 @@ public class MainActivity extends AppCompatActivity  {
      * ¡Atención, no finaliza la conexión ni el tunel SSH!
      * TODO: Resolver caso de no encontrar versión al comparar
      * TODO: Error si no existen versiones superiores
+     * TODO: BUG Y ERROR DE LANZADO EN LA APLICACIÓN CUÁNDO BORRA VERSIONES Y NO HAY PRÓXIMOS EVENTOS.
      */
     private void RetrieveDatafromServer() {
         AsyncTask.execute(new Runnable() {
@@ -286,7 +287,7 @@ public class MainActivity extends AppCompatActivity  {
                                 new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
                                 //TODO: Comprobar porque al recoger la versión más reciente con valor nulo, no crashea la App.
                                 //TODO: Limpia versiones si tabla de la bbdd externa ha sido formateada.
-                                if (partidosVersions.get(partidosVersions.size() - 1).version_number>
+                                if (partidosVersions.size()<=0 || partidosVersions.get(partidosVersions.size() - 1).version_number>
                                                 new DbManagerSSH().getUltimaNVersion(
                                                         Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")
                                 ) {
