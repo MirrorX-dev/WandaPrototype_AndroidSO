@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity  {
      * Realiza las consultas correspondientes.
      * ¡Atención, no finaliza la conexión ni el tunel SSH!
      * TODO: Resolver caso de no encontrar versión al comparar
-     * TODO: Error si no existen registros de versiones.
+     * TODO: Error si no existen versiones superiores
      */
     private void RetrieveDatafromServer() {
         AsyncTask.execute(new Runnable() {
@@ -277,9 +277,11 @@ public class MainActivity extends AppCompatActivity  {
                              */
                             mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
                             List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();
-                            if (PartidoVersions.partidosVersions.size()<=0
-                                            || new DbManagerSSH().ComprobarUltimaVersion(partidosVersions.get(partidosVersions.size() - 1).version_number,
-                                    Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")) {
+                            if (
+                                    PartidoVersions.partidosVersions.size()<=0 ||
+                                            new DbManagerSSH().ComprobarUltimaVersion(
+                                                    Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")
+                            ) {
                                 mPartidoLab.setPartidosNuke();
                                 new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
                                 new DbManagerSSH().DefinirObjetoPartidoVersiones("wandametropolitano_versions");

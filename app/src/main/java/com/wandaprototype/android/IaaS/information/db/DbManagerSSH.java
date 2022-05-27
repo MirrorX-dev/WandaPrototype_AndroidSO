@@ -247,9 +247,18 @@ public class DbManagerSSH {
 		
 		return partido_query;
 	}
-    
-    
-	public boolean ComprobarUltimaVersion(int miversion, Timestamp mifecha, String table) {
+
+	/**
+	 * Comprueba mediante ciertos parametros de entrada la validación de la ultima versión
+	 * basada en la fecha más reciente (tanto servidor/cliente).
+	 * El número de versión no es utilizado. Su uso es principalemente para la organización
+	 * de los datos.
+	 * @param miversion Debes especificar tu ultima versión de la bbdd interna.
+	 * @param mifecha Debes especificar tu ultima fecha de la bbdd interna.
+	 * @param table Debes especificar tu tabla referida al estadio.
+	 * @return
+	 */
+	public boolean ComprobarUltimaVersion(Timestamp mifecha, String table) {
 		boolean output = false;
 		try {
 			int lastVersion;
@@ -276,6 +285,7 @@ public class DbManagerSSH {
 
 		return output;
 	}
+
 	
 	public void DefinirObjetoPartido(String table) {
 		String query = "SELECT * FROM wandaprototype." + table +"";
