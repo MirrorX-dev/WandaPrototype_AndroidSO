@@ -7,15 +7,27 @@ import android.content.Context;
 
 import androidx.room.Room;
 
-import com.wandaprototype.android.objects.Partido;
 import com.wandaprototype.android.objects.PartidoVersions;
 
 import java.util.List;
 
+/**
+ * Usos de interfaces DAO. Interactua con la base de datos interna.
+ *
+ * @author Jesús Blanco Antoraz
+ */
 public class PartidoVersionsLab {
     private static PartidoVersionsLab sPartidoVersionsLab;
-    private PartidoVersionsDAO.PartidoVersionsDao mPartidoVersionsDao;
+    private final PartidoVersionsDAO.PartidoVersionsDao mPartidoVersionsDao;
 
+    /**
+     * Se agregan parametros de migraciones en los casos
+     * de introdución de nuevas tablas al schema de la
+     * aplicación.
+     *
+     * @param context introduce llamada al contexto de la aplicación.
+     * @author Jesús Blanco Antoraz
+     */
     private PartidoVersionsLab(Context context) {
         Context appContext = context.getApplicationContext();
         PartidoDatabase database = Room.databaseBuilder(appContext, PartidoDatabase.class, "partidoVersions")
@@ -33,14 +45,27 @@ public class PartidoVersionsLab {
         return sPartidoVersionsLab;
     }
 
+    /**
+     * Obtiene un listado de todos las versiones de partidos almacenados.
+     *
+     * @return listado partidosVersiones
+     */
     public List<PartidoVersions> getPartidoVersionDao() {
         return mPartidoVersionsDao.getPartidoVersionDao();
     }
 
+    /**
+     * Añade una nueva versión de informacíón de partidos.
+     *
+     * @param partidoVersions llamda a la instancia del objeto
+     */
     public void addPartidoVersions(PartidoVersions partidoVersions) {
         mPartidoVersionsDao.addPartidoVersions(partidoVersions);
     }
 
+    /**
+     * Formatea la tabla que contiene las versiones de partidos
+     */
     public void setPartidoVersionsNuke() {
         mPartidoVersionsDao.setPartidoVersionsNuke();
     }

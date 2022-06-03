@@ -9,13 +9,20 @@ import androidx.room.Update;
 
 import com.wandaprototype.android.objects.Partido;
 
-import java.util.Calendar;
 import java.util.List;
-import java.util.TimeZone;
 
+/**
+ * Interfaz común entre la aplicación y uno o más dispositivos de almacenamiento de datos
+ * Contiene establecidad las consultas que serán utilizadas para la consulta de información.
+ */
 public interface PartidoDAO {
     @Dao
-    public interface PartidoDao {
+    /*
+      Subclase de PartidoDao. Contiene la información dispuesta al
+      usuario mediante consultas que devuelven la información en
+      distintos tipos de datos primitivos.
+     */
+    interface PartidoDao {
         @Query("SELECT * FROM partido")
         List<Partido> getPartidos();
 
@@ -33,11 +40,11 @@ public interface PartidoDAO {
 
         //@Query("select * from partido where fpartido>=DATETIME('now') and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 3")
         @Query("select * from partido where fpartido>=DATETIME('now', '-1 day') and hpartido>=TIME() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 3")
-        List<Partido>  getMoreRecentPartidos_limit3();
+        List<Partido> getMoreRecentPartidos_limit3();
 
         //@Query("select * from partido where fpartido>=DATETIME('now') and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 20")
         @Query("select * from partido where fpartido>=DATETIME('now', '-1 day') and hpartido>=TIME() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 20")
-        List<Partido>  getMoreRecentPartidos_limit6();
+        List<Partido> getMoreRecentPartidos_limit6();
 
         @Query("SELECT * FROM partido WHERE epartido LIKE :estadio")
         Partido getPartidosByStadium(String estadio);

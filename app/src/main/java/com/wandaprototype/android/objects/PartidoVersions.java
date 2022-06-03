@@ -5,15 +5,13 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.sql.Date;
 import java.util.ArrayList;
 
 @Entity(tableName = "partidoVersions")
 public class PartidoVersions {
-    public static ArrayList<PartidoVersions> partidosVersions = new ArrayList<PartidoVersions>();
+    public static ArrayList<PartidoVersions> partidosVersions = new ArrayList<>();
 
     @PrimaryKey
-    @NonNull
     @ColumnInfo(name = "vnumber")
     public int version_number;
 
@@ -28,6 +26,7 @@ public class PartidoVersions {
 
     public PartidoVersions() {
         // TODO Auto-generated constructor stub
+        version_date = null;
     }
 
     public static ArrayList<PartidoVersions> getPartidosVersions() {
@@ -55,6 +54,7 @@ public class PartidoVersions {
         this.version_date = version_date;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "PartidoVersions{" +
