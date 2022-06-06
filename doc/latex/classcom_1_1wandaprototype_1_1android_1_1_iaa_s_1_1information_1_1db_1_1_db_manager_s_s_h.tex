@@ -1,0 +1,206 @@
+\hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h}{}\doxysection{com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH Class Reference}
+\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h}\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+
+
+Collaboration diagram for com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a8f84f2f152a5026bc2686a2c45152f67}{check\+Connection}} (String file)  throws JSch\+Exception 
+\item 
+boolean \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a76a38475aadc804f80830d6d1fb34082}{get\+Data\+Per\+ID}} (String table, String idpartido)
+\item 
+List$<$ String $>$ \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_affe51d8a642493b6c2fa09893aa230e5}{Obtener\+Partido\+Mas\+Cercano}} ()
+\item 
+boolean \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a844261dffcbe8360c79fd77d70c5fd1a}{Comprobar\+Ultima\+Version}} (Timestamp mifecha, String table)
+\item 
+int \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a21041da91dbe3cc67d88fa9174858c69}{get\+Ultima\+NVersion}} (Timestamp mifecha, String table)
+\item 
+void \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_af59a226fb4fdd60372992d39d68ca59b}{Definir\+Objeto\+Partido}} (String table)
+\item 
+void \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_aa4de42a52a364a461500e48e068fcaab}{Definir\+Objeto\+Partido\+Versiones}} (String table)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Connection \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a86bd0b8bbe8d2c419e96018871254f01}{conectar}} (String file)  throws JSch\+Exception, SQLException, IOException, Class\+Not\+Found\+Exception 
+\item 
+static void \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a025466ea14080891824c5493d475c555}{Close\+Data\+Base\+Connection}} ()
+\item 
+static void \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_aaaa0211ec50ef27757ec254f93507978}{Close\+SSHConnection}} ()
+\item 
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_af5cb220487f71f4ed280c39360244cbd}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_af5cb220487f71f4ed280c39360244cbd}} 
+static void {\bfseries main} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ String $>$ \mbox{\hyperlink{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a67df0f43ae931ceccc8e0232883caacb}{partido\+\_\+query}} = new Array\+List$<$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a8f84f2f152a5026bc2686a2c45152f67}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a8f84f2f152a5026bc2686a2c45152f67}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!checkConnection@{checkConnection}}
+\index{checkConnection@{checkConnection}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{checkConnection()}{checkConnection()}}
+{\footnotesize\ttfamily boolean com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+check\+Connection (\begin{DoxyParamCaption}\item[{String}]{file }\end{DoxyParamCaption}) throws JSch\+Exception}
+
+Comprueba la conexión. Se genera una conexión tunel ssh hacia el servidor y se usa el driver para realizar consultas SQL. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a8f84f2f152a5026bc2686a2c45152f67_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a025466ea14080891824c5493d475c555}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a025466ea14080891824c5493d475c555}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!CloseDataBaseConnection@{CloseDataBaseConnection}}
+\index{CloseDataBaseConnection@{CloseDataBaseConnection}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{CloseDataBaseConnection()}{CloseDataBaseConnection()}}
+{\footnotesize\ttfamily static void com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+Close\+Data\+Base\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Cierra el hilo de conexión con la base de datos. \mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_aaaa0211ec50ef27757ec254f93507978}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_aaaa0211ec50ef27757ec254f93507978}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!CloseSSHConnection@{CloseSSHConnection}}
+\index{CloseSSHConnection@{CloseSSHConnection}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{CloseSSHConnection()}{CloseSSHConnection()}}
+{\footnotesize\ttfamily static void com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+Close\+SSHConnection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Cierra el hilo de conexión con el tunel SSH hacia el servidor. \mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a844261dffcbe8360c79fd77d70c5fd1a}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a844261dffcbe8360c79fd77d70c5fd1a}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!ComprobarUltimaVersion@{ComprobarUltimaVersion}}
+\index{ComprobarUltimaVersion@{ComprobarUltimaVersion}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{ComprobarUltimaVersion()}{ComprobarUltimaVersion()}}
+{\footnotesize\ttfamily boolean com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+Comprobar\+Ultima\+Version (\begin{DoxyParamCaption}\item[{Timestamp}]{mifecha,  }\item[{String}]{table }\end{DoxyParamCaption})}
+
+Comprueba mediante ciertos parametros de entrada la validación de la ultima versión basada en la fecha más reciente (tanto servidor/cliente). El número de versión no es utilizado. Su uso es principalemente para la organización de los datos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mifecha} & Debes especificar tu ultima fecha de la bbdd interna. \\
+\hline
+{\em table} & Debes especificar tu tabla referida al estadio. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean if exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a86bd0b8bbe8d2c419e96018871254f01}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a86bd0b8bbe8d2c419e96018871254f01}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!conectar@{conectar}}
+\index{conectar@{conectar}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{conectar()}{conectar()}}
+{\footnotesize\ttfamily static Connection com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+conectar (\begin{DoxyParamCaption}\item[{String}]{file }\end{DoxyParamCaption}) throws JSch\+Exception, SQLException, IOException, Class\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Construye un tunel de acceso seguro mediante SSH de tipo cifrado para conectarse al servidor de forma segura. Inicia sesión con un usuario guardado
+
+\begin{DoxyReturn}{Returns}
+Devuelve Connnection, permite trabajar sobre la conexión y driver de la base de datos. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em JSch\+Exception} & error relacionados con conexiones mediante SSH tunel. \\
+\hline
+{\em SQLException} & error relacionados con conexiones querys SQL. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a86bd0b8bbe8d2c419e96018871254f01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_af59a226fb4fdd60372992d39d68ca59b}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_af59a226fb4fdd60372992d39d68ca59b}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!DefinirObjetoPartido@{DefinirObjetoPartido}}
+\index{DefinirObjetoPartido@{DefinirObjetoPartido}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{DefinirObjetoPartido()}{DefinirObjetoPartido()}}
+{\footnotesize\ttfamily void com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+Definir\+Objeto\+Partido (\begin{DoxyParamCaption}\item[{String}]{table }\end{DoxyParamCaption})}
+
+Obtiene los elementos de la consulta de partidos de la BD y los convierte a objetos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & tabla donde operaremos con operaciones querys. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_aa4de42a52a364a461500e48e068fcaab}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_aa4de42a52a364a461500e48e068fcaab}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!DefinirObjetoPartidoVersiones@{DefinirObjetoPartidoVersiones}}
+\index{DefinirObjetoPartidoVersiones@{DefinirObjetoPartidoVersiones}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{DefinirObjetoPartidoVersiones()}{DefinirObjetoPartidoVersiones()}}
+{\footnotesize\ttfamily void com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+Definir\+Objeto\+Partido\+Versiones (\begin{DoxyParamCaption}\item[{String}]{table }\end{DoxyParamCaption})}
+
+Obtiene los elementos de la consulta de partidos\+Versiones de la BD y los convierte a objetos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & tabla donde operaremos con operaciones querys. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a76a38475aadc804f80830d6d1fb34082}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a76a38475aadc804f80830d6d1fb34082}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!getDataPerID@{getDataPerID}}
+\index{getDataPerID@{getDataPerID}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{getDataPerID()}{getDataPerID()}}
+{\footnotesize\ttfamily boolean com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+get\+Data\+Per\+ID (\begin{DoxyParamCaption}\item[{String}]{table,  }\item[{String}]{idpartido }\end{DoxyParamCaption})}
+
+Obtiene mediante una consulta reutilizable para cualquier estadio devuelve un estado de tipo booleano. Si existe el identificador, devuelve el valor adjunto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & tabla donde operaremos las querys \\
+\hline
+{\em idpartido} & identificador del partido deseado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false si existe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a21041da91dbe3cc67d88fa9174858c69}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a21041da91dbe3cc67d88fa9174858c69}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!getUltimaNVersion@{getUltimaNVersion}}
+\index{getUltimaNVersion@{getUltimaNVersion}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{getUltimaNVersion()}{getUltimaNVersion()}}
+{\footnotesize\ttfamily int com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+get\+Ultima\+NVersion (\begin{DoxyParamCaption}\item[{Timestamp}]{mifecha,  }\item[{String}]{table }\end{DoxyParamCaption})}
+
+Obtiene la ultima versión del servidor. En el caso de obtener una versión inexistente se toma el valor -\/1 como valor de error controlado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mifecha} & fecha actual indicada \\
+\hline
+{\em table} & tabla donde operaremos con operaciones querys. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nº de versión. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_affe51d8a642493b6c2fa09893aa230e5}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_affe51d8a642493b6c2fa09893aa230e5}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!ObtenerPartidoMasCercano@{ObtenerPartidoMasCercano}}
+\index{ObtenerPartidoMasCercano@{ObtenerPartidoMasCercano}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{ObtenerPartidoMasCercano()}{ObtenerPartidoMasCercano()}}
+{\footnotesize\ttfamily List$<$ String $>$ com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+Obtener\+Partido\+Mas\+Cercano (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Devuelve un listado de un solo partido mas cercano frente a la fecha del evento.
+
+\begin{DoxyReturn}{Returns}
+listado partidos 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a67df0f43ae931ceccc8e0232883caacb}\label{classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h_a67df0f43ae931ceccc8e0232883caacb}} 
+\index{com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}!partido\_query@{partido\_query}}
+\index{partido\_query@{partido\_query}!com.wandaprototype.android.IaaS.information.db.DbManagerSSH@{com.wandaprototype.android.IaaS.information.db.DbManagerSSH}}
+\doxysubsubsection{\texorpdfstring{partido\_query}{partido\_query}}
+{\footnotesize\ttfamily List$<$String$>$ com.\+wandaprototype.\+android.\+Iaa\+S.\+information.\+db.\+Db\+Manager\+SSH.\+partido\+\_\+query = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+Listado para Querys\+: 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mirror\+X/\+Android\+Studio\+Projects/\+Sincronizados/\+Wanda\+Prototype/app/src/main/java/com/wandaprototype/android/\+Iaa\+S/information/db/Db\+Manager\+SSH.\+java\end{DoxyCompactItemize}
