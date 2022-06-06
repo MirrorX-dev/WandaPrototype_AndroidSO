@@ -264,10 +264,8 @@ public class MainActivity extends AppCompatActivity {
                           Comprobamos si mi versión local contiene la ultima versión
                           de partidosVersions interna y externa.
                           Si no contiene ninguna versión procedemos a obtener los datos.
-                          TODO: Actualizar datos al recuperar información nueva del servidor
-                          TODO: Cerrar conexiones una vez finalizadas serie de consultas.
 
-                          TODO: Debe borrar también los listados y el calendario para evitar confusiones.!!!!
+                          TODO: Debe borrar calendario para evitar confusiones.!!!!
                          */
                     mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
                     List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();
