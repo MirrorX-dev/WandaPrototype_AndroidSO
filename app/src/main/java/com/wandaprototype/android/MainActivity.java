@@ -293,7 +293,6 @@ public class MainActivity extends AppCompatActivity {
                              */
                         mPartidoLab = PartidoLab.get(MainActivity.this);
                         for (int i = 0; i < Partido.partidos.size(); i++) {
-                            System.out.println(Partido.partidos.get(i));
                             if (mPartidoLab.isDataExist(Partido.partidos.get(i).id_partido) == 0) {
                                 mPartido = new Partido();
                                 mPartido.setId_partido(Partido.partidos.get(i).id_partido);
@@ -475,7 +474,6 @@ public class MainActivity extends AppCompatActivity {
     public void MostrarDatosRecientes() {
         //mPartidoLab = PartidoLab.get(MainActivity.this);
         System.out.println("Último partido actual: " + mPartidoLab.getMoreRecentPartidos_limit6());
-        System.out.println(mPartidoLab.getPartidos());
 
         Partido partidos = mPartidoLab.getMoreRecentPartido();
         if (mPartidoLab.getMoreRecentPartido() != null) {
