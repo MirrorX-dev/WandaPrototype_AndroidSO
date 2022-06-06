@@ -224,8 +224,6 @@ public class MainActivity extends AppCompatActivity {
      * Recopila información de servidor mediante un tunel seguro SSH.
      * Realiza las consultas correspondientes.
      * ¡Atención, no finaliza la conexión ni el tunel SSH!
-     * TODO: Resolver caso de no encontrar versión al comparar
-     * TODO: Error si no existen versiones superiores
      */
     private void RetrieveDatafromServer() {
         AsyncTask.execute(() -> {
