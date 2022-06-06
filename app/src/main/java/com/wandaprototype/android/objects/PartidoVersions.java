@@ -3,6 +3,7 @@ package com.wandaprototype.android.objects;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.util.ArrayList;
@@ -24,9 +25,9 @@ public class PartidoVersions {
         this.version_date = version_date;
     }
 
+    @Ignore
     public PartidoVersions() {
-        // TODO Auto-generated constructor stub
-        version_date = null;
+        version_date = "";
     }
 
     public static ArrayList<PartidoVersions> getPartidosVersions() {

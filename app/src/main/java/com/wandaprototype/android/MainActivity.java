@@ -218,11 +218,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (Partido.partidos.size() == 0) {
-            //Toast.makeText(this, "Hola he vuelto", Toast.LENGTH_LONG).show();
-        } else {
-            //Toast.makeText(this, "Huevos", Toast.LENGTH_LONG).show();
-        }
     }
 
     /**
@@ -231,7 +226,6 @@ public class MainActivity extends AppCompatActivity {
      * ¡Atención, no finaliza la conexión ni el tunel SSH!
      * TODO: Resolver caso de no encontrar versión al comparar
      * TODO: Error si no existen versiones superiores
-     * TODO: BUG Y ERROR DE LANZADO EN LA APLICACIÓN CUÁNDO BORRA VERSIONES Y NO HAY PRÓXIMOS EVENTOS.
      */
     private void RetrieveDatafromServer() {
         AsyncTask.execute(() -> {

@@ -3,6 +3,7 @@ package com.wandaprototype.android.objects;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.util.ArrayList;
@@ -128,8 +129,8 @@ public class Partido {
                 + ", horapartido=" + horapartido + ", estadiopartido=" + estadiopartido + "]";
     }
 
-    public Partido(String id_partido, String competicion, String equipolocal, String equipovisitante, String jornada,
-                   String fechapartido, String horapartido, String estadiopartido) {
+    public Partido(@NonNull String id_partido, @NonNull String competicion, @NonNull String equipolocal, @NonNull String equipovisitante, @NonNull String jornada,
+                   @NonNull String fechapartido, @NonNull String horapartido, @NonNull String estadiopartido) {
         super();
         this.id_partido = id_partido;
         this.competicion = competicion;
@@ -141,16 +142,16 @@ public class Partido {
         this.estadiopartido = estadiopartido;
     }
 
+    @Ignore
     public Partido() {
-        // TODO Auto-generated constructor stub
-        id_partido = null;
-        competicion = null;
-        equipolocal = null;
-        estadiopartido = null;
-        horapartido = null;
-        fechapartido = null;
-        equipovisitante = null;
-        jornada = null;
+        id_partido = "";
+        competicion = "";
+        equipolocal = "";
+        equipovisitante= "";
+        jornada = "";
+        fechapartido ="";
+        horapartido = "";
+        estadiopartido = "";
     }
 
 }
