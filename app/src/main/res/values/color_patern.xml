@@ -6,4 +6,11 @@
     <color name="pattern_4">#A3CEF1</color>
     <color name="pattern_5">#8B8C89</color>
     <color name="pattern_6">#FFFFFF</color>
+    <color name="pattern_7">#131313</color>
+    <color name="pattern_1_dark">#1b1b1b</color>
+    <color name="pattern_2_dark">#171716</color>
+    <color name="pattern_3_dark">#1b202f</color>
+    <color name="pattern_4_dark">#090808</color>
+    <color name="pattern_5_dark">#0D1322</color>
+    <color name="pattern_6_dark">#B4B4B4</color>
 </resources>
