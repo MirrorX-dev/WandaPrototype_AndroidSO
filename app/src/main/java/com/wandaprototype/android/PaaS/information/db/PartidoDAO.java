@@ -34,16 +34,16 @@ public interface PartidoDAO {
 
         //@Query()
 
-        //@Query("select * from partido where fpartido>=DATE('now','-1 day') and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 1")
-        @Query("select * from partido where fpartido>=DATETIME('now', '-1 day') and hpartido>=TIME() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 1")
+        @Query("select * from partido where fpartido>=DATE('now','-1 day') and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 1")
+        //@Query("select * from partido where fpartido>=DATETIME('now', '-1 day') and hpartido>=TIME() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 1")
         Partido getMoreRecentPartido();
 
-        //@Query("select * from partido where fpartido>=DATETIME('now') and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 3")
-        @Query("select * from partido where fpartido>=DATETIME('now', '-1 day') and hpartido>=TIME() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 3")
+        @Query("select * from partido where fpartido>=DATE('now','-1 day') and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 3")
+        //@Query("select * from partido where fpartido>=DATETIME('now', '-1 day') and hpartido>=TIME() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 3")
         List<Partido> getMoreRecentPartidos_limit3();
 
-        //@Query("select * from partido where fpartido>=DATETIME('now') and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 20")
-        @Query("select * from partido where fpartido>=DATETIME('now', '-1 day') and hpartido>=TIME() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 20")
+        @Query("select * from partido where fpartido>=DATE('now','-1 day') and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 20")
+        //@Query("select * from partido where fpartido>=DATETIME('now', '-1 day') and hpartido>=TIME() and epartido = 'Wanda Metropolitano'  ORDER BY fpartido asc, hpartido LIMIT 20")
         List<Partido> getMoreRecentPartidos_limit6();
 
         @Query("SELECT * FROM partido WHERE epartido LIKE :estadio")

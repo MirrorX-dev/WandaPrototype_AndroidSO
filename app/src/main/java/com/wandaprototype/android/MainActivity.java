@@ -1,7 +1,9 @@
 package com.wandaprototype.android;
 
+
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -17,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.mapbox.maps.MapView;
 import com.mapbox.maps.Style;
@@ -113,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
           TODO: Cambiar mapa a modo oscuro cuando se active la opción en el SO.
          */
         MapView mapView = findViewById(R.id.mapView);
-        mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_DAY);
+
 
         /*
           Instancia CalendarView, permite manejar eventos tras realizar ciertas acciones
@@ -152,6 +155,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Establece configuraciones de componentes si modos de
+         * "Modo nocturno" DarkMode está activado o no.
+         * @author. Android stackoverflow
+         */
+        int currentNightMode = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        switch (currentNightMode) {
+            case Configuration.UI_MODE_NIGHT_NO:
+                // Night mode is not active on device
+                mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_DAY);
+                break;
+            case Configuration.UI_MODE_NIGHT_YES:
+                // Night mode is active on device
+                mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_NIGHT);
+                break;
+        }
 
     }
 
@@ -530,9 +549,14 @@ public class MainActivity extends AppCompatActivity {
         List<Partido> partidos_sel3 = mPartidoLab.getMoreRecentPartidos_limit3();
         for (int i = 0; i < partidos_sel3.size(); i++) {
             adapter.add(
+                    /*
                     partidos_sel3.get(i).fechapartido + " | "
                             + partidos_sel3.get(i).competicion + " | "
                             + partidos_sel3.get(i).jornada);
+                    */
+                    partidos_sel3.get(i).competicion + " | "
+                            + partidos_sel3.get(i).fechapartido + " | "
+                            + partidos_sel3.get(i).horapartido);
         }
         adapter.notifyDataSetChanged();
     }
