@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView fechaTextView;
     private TextView hora_separador_TextView;
     private TextView horaTextView;
+    private TextView versionTextView;
 
     Context context = this;
 
