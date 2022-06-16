@@ -58,7 +58,6 @@ public class DbManagerSSH {
     public static Connection conectar(String file) throws JSchException, SQLException, IOException, ClassNotFoundException {
         String jumpserverHost = BuildConfig.sshjump_host;
         String jumpserverUsername = BuildConfig.sshjumpserverUsername;
-
         String databaseHost = BuildConfig.databasehost;
         int databasePort = 3306;
 
