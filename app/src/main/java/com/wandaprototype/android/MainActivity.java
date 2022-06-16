@@ -1,7 +1,9 @@
 package com.wandaprototype.android;
 
+
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -12,11 +14,13 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.mapbox.maps.MapView;
 import com.mapbox.maps.Style;
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView fechaTextView;
     private TextView hora_separador_TextView;
     private TextView horaTextView;
+    private TextView versionTextView;
 
     Context context = this;
 
@@ -113,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
           TODO: Cambiar mapa a modo oscuro cuando se active la opción en el SO.
          */
         MapView mapView = findViewById(R.id.mapView);
-        mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_DAY);
+
 
         /*
           Instancia CalendarView, permite manejar eventos tras realizar ciertas acciones
@@ -152,6 +157,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Establece configuraciones de componentes si modos de
+         * "Modo nocturno" DarkMode está activado o no.
+         * @author. Android stackoverflow
+         */
+        int currentNightMode = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        switch (currentNightMode) {
+            case Configuration.UI_MODE_NIGHT_NO:
+                // Night mode is not active on device
+                mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_DAY);
+                break;
+            case Configuration.UI_MODE_NIGHT_YES:
+                // Night mode is active on device
+                mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_NIGHT);
+                break;
+        }
 
     }
 
@@ -257,8 +278,9 @@ public class MainActivity extends AppCompatActivity {
 
                     path = f.getPath();
                     Log.i("WandaPrototype [INFO]", "Ruta de información de la clave privada: " + path);
-                    new DbManagerSSH().checkConnection(path);
-
+                    try {
+                        new DbManagerSSH().checkConnection(path);
+                        //Toast.makeText(context, "Comprobando ultima versión", Toast.LENGTH_SHORT).show();
                         /*
                           Añadimos punto de control:
                           Comprobamos si mi versión local contiene la ultima versión
@@ -267,77 +289,84 @@ public class MainActivity extends AppCompatActivity {
 
                           TODO: Debe borrar calendario para evitar confusiones.!!!!
                          */
-                    mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
-                    List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();
-                    if (
-                            PartidoVersions.partidosVersions.size() <= 0 ||
-                                    new DbManagerSSH().ComprobarUltimaVersion(
-                                            Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")
-                    ) {
-                        mPartidoLab.setPartidosNuke();
-                        new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
-                        //TODO: Comprobar porque al recoger la versión más reciente con valor nulo, no crashea la App.
-                        //TODO: Limpia versiones si tabla de la bbdd externa ha sido formateada.
-                        if (partidosVersions.size() <= 0 || partidosVersions.get(partidosVersions.size() - 1).version_number >
-                                new DbManagerSSH().getUltimaNVersion(
-                                        Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")
+                        mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
+                        List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();
+                        if (
+                                PartidoVersions.partidosVersions.size() <= 0 ||
+                                        new DbManagerSSH().ComprobarUltimaVersion(
+                                                Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")
                         ) {
-                            mPartidoVersionsLab.setPartidoVersionsNuke();
-                        }
-
-                        new DbManagerSSH().DefinirObjetoPartidoVersiones("wandametropolitano_versions");
-
-                            /*
-                              Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.
-                              En Pruebas.
-                             */
-                        mPartidoLab = PartidoLab.get(MainActivity.this);
-                        for (int i = 0; i < Partido.partidos.size(); i++) {
-                            System.out.println(Partido.partidos.get(i));
-                            if (mPartidoLab.isDataExist(Partido.partidos.get(i).id_partido) == 0) {
-                                mPartido = new Partido();
-                                mPartido.setId_partido(Partido.partidos.get(i).id_partido);
-                                mPartido.setCompeticion(Partido.partidos.get(i).competicion);
-                                mPartido.setEquipolocal(Partido.partidos.get(i).equipolocal);
-                                mPartido.setEquipovisitante(Partido.partidos.get(i).equipovisitante);
-                                mPartido.setJornada(Partido.partidos.get(i).jornada);
-                                mPartido.setFechapartido(Partido.partidos.get(i).fechapartido);
-                                mPartido.setHorapartido(Partido.partidos.get(i).horapartido);
-                                mPartido.setEstadiopartido(Partido.partidos.get(i).estadiopartido);
-                                mPartidoLab.addPartido(mPartido);
+                            //Toast.makeText(context, "Actualizando información", Toast.LENGTH_SHORT).show();
+                            mPartidoLab.setPartidosNuke();
+                            new DbManagerSSH().DefinirObjetoPartido("wandametropolitano_partidos");
+                            //TODO: Comprobar porque al recoger la versión más reciente con valor nulo, no crashea la App.
+                            //TODO: Limpia versiones si tabla de la bbdd externa ha sido formateada.
+                            if (partidosVersions.size() <= 0 || partidosVersions.get(partidosVersions.size() - 1).version_number >
+                                    new DbManagerSSH().getUltimaNVersion(
+                                            Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), "wandametropolitano_versions")
+                            ) {
+                                mPartidoVersionsLab.setPartidoVersionsNuke();
                             }
-                        }
+
+                            new DbManagerSSH().DefinirObjetoPartidoVersiones("wandametropolitano_versions");
 
                             /*
                               Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.
                               En Pruebas.
                              */
-                        for (int i = 0; i < PartidoVersions.partidosVersions.size(); i++) {
-                            mPartidoVersions = new PartidoVersions();
-                            mPartidoVersions.setVersion_number(PartidoVersions.partidosVersions.get(i).version_number);
-                            mPartidoVersions.setVersion_date(PartidoVersions.partidosVersions.get(i).version_date);
-                            mPartidoVersionsLab.addPartidoVersions(mPartidoVersions);
-                        }
+                            mPartidoLab = PartidoLab.get(MainActivity.this);
+                            for (int i = 0; i < Partido.partidos.size(); i++) {
+                                System.out.println(Partido.partidos.get(i));
+                                if (mPartidoLab.isDataExist(Partido.partidos.get(i).id_partido) == 0) {
+                                    mPartido = new Partido();
+                                    mPartido.setId_partido(Partido.partidos.get(i).id_partido);
+                                    mPartido.setCompeticion(Partido.partidos.get(i).competicion);
+                                    mPartido.setEquipolocal(Partido.partidos.get(i).equipolocal);
+                                    mPartido.setEquipovisitante(Partido.partidos.get(i).equipovisitante);
+                                    mPartido.setJornada(Partido.partidos.get(i).jornada);
+                                    mPartido.setFechapartido(Partido.partidos.get(i).fechapartido);
+                                    mPartido.setHorapartido(Partido.partidos.get(i).horapartido);
+                                    mPartido.setEstadiopartido(Partido.partidos.get(i).estadiopartido);
+                                    mPartidoLab.addPartido(mPartido);
+                                }
+                            }
+
+                            /*
+                              Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.
+                              En Pruebas.
+                             */
+                            for (int i = 0; i < PartidoVersions.partidosVersions.size(); i++) {
+                                mPartidoVersions = new PartidoVersions();
+                                mPartidoVersions.setVersion_number(PartidoVersions.partidosVersions.get(i).version_number);
+                                mPartidoVersions.setVersion_date(PartidoVersions.partidosVersions.get(i).version_date);
+                                mPartidoVersionsLab.addPartidoVersions(mPartidoVersions);
+                            }
 
                             /*
                               Limpia y elimina lo lista y datos en el calendario
                              */
-                        ReloadListView();
+                            ReloadListView();
 
                             /*
                               Una vez finalice las tareas anteriores es necesario
                               llamar a las funciones para actualizar los datos
                               antes de finalizar el hilo de fondo.
                              */
-                        RetrieveUIData();
+                            RetrieveUIData();
+                            //MostrarUltimaVersion();
 
-                    } else {
-                        Log.i("WandaPrototype [INFO]", "No se han encontrado versiones nuevas");
-                        Log.i("WandaPrototype [INFO]", String.valueOf(partidosVersions));
-                        System.out.println("Información Extra: " + partidosVersions.get(partidosVersions.size() - 1).version_number);
+                        } else {
+                            Log.i("WandaPrototype [INFO]", "No se han encontrado versiones nuevas");
+                            Toast.makeText(context, "Contiene la ultima versión", Toast.LENGTH_SHORT).show();
+                            Log.i("WandaPrototype [INFO]", String.valueOf(partidosVersions));
+                            System.out.println("Información Extra: " + partidosVersions.get(partidosVersions.size() - 1).version_number);
 
-                        ReloadListView();
-                        RetrieveUIData();
+                            ReloadListView();
+                            RetrieveUIData();
+                        }
+                    } catch (Exception e) {
+                        Log.e("WandaPrototype [ERROR]", "Conexión/Fichero pueden estar fallando,,,");
+                        e.printStackTrace();
                     }
 
                         /*
@@ -411,27 +440,41 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void FlujoPrincipal() {
         mPartidoLab = PartidoLab.get(MainActivity.this);
+
         if (isNetworkAvailable()) {
             if (isEmptyPartidos()) {
                 //TODO: Debe abrir un único canal SSH o cerrar la conexión.
                 //TODO: No recarga los datos bucar medio.
                 //TODO: Debe formatear la tabla.
                 MostrarSinDatosConConexion();
-                RetrieveDatafromServer();
+                MostrarUltimaVersion();
+                try {
+                    RetrieveDatafromServer();
+                } catch (Exception e) {
+                    MostrarSinDatosConConexion();
+                    MostrarUltimaVersion();
+                }
             } else {
                 //TODO: Debe abrir un único canal SSH o cerrar la conexión.
                 //TODO: No recarga los datos bucar medio.
                 //TODO: Debe formatear la tabla.
                 RetrieveUIData();
-                RetrieveDatafromServer();
+                MostrarUltimaVersion();
+                try {
+                    RetrieveDatafromServer();
+                } catch (Exception e) {
+                    RetrieveUIData();
+                }
             }
         } else {
             if (isEmptyPartidos()) {
                 MostrarSinDatos();
+                MostrarUltimaVersion();
             } else {
                 MostrarDatosRecientes();
                 MostrarDatosLista();
                 MostrarDatosCalendario();
+                MostrarUltimaVersion();
             }
         }
     }
@@ -520,6 +563,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Muestra la ultima versión de la información.
+     */
+    private void MostrarUltimaVersion() {
+        mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);
+        if (!(mPartidoVersionsLab.getPartidoVersionDao().size() <=0)) {
+            Toast.makeText(context, String.valueOf("Fecha de información mostrada: "+mPartidoVersionsLab.getPartidoVersionDao().get(mPartidoVersionsLab.getPartidoVersionDao().size() - 1).version_date), Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(context, "No contienes ninguna versión", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
      * Obtiene los elementos de la base de datos interna, realizando
      * consultas que obtienen los partidos mas recientes de hasta un
      * limite de 3 para el listado.
@@ -530,9 +585,14 @@ public class MainActivity extends AppCompatActivity {
         List<Partido> partidos_sel3 = mPartidoLab.getMoreRecentPartidos_limit3();
         for (int i = 0; i < partidos_sel3.size(); i++) {
             adapter.add(
+                    /*
                     partidos_sel3.get(i).fechapartido + " | "
                             + partidos_sel3.get(i).competicion + " | "
                             + partidos_sel3.get(i).jornada);
+                    */
+                    partidos_sel3.get(i).competicion + " | "
+                            + partidos_sel3.get(i).fechapartido + " | "
+                            + partidos_sel3.get(i).horapartido);
         }
         adapter.notifyDataSetChanged();
     }

@@ -1,5 +1,7 @@
 package com.wandaprototype.android.IaaS.information.db;
 
+import static android.provider.Settings.Global.getString;
+
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -7,6 +9,8 @@ import androidx.annotation.RequiresApi;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
+import com.wandaprototype.BuildConfig;
+import com.wandaprototype.R;
 import com.wandaprototype.android.objects.Partido;
 import com.wandaprototype.android.objects.PartidoVersions;
 
@@ -30,9 +34,7 @@ public class DbManagerSSH {
      * Listado para Querys:
      */
     public static List<String> partido_query = new ArrayList<>();
-
-    private static final String knownHostPublicKey = "158.101.98.158 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDTULimuMguOvnMBPqaCbD7me4622EHZUMteOhOcKmP/puHSGFFDbXegEizQ1nJRng3coxt7lk+VYQXtmxECDuvyLvOCPng47jWttOD5ppST6xkrTquUqTwBQmnIgRPQ322KFuuL5yzr6BlzzrzlhlGGX8gsCmqzfUXMo5Pof7nXhVKl4dMIczeLeCREv9r4PCMtzLRKAI/d0Of7i/Bhfs1IYMlpTRBq3SxUoZOgRMfpo/ONyOoTIBKTWJRFPj4mf/laRv73BgnlkQzlaRCXR6Ytb3qI7CCz6ktWh53t9w0kI5wDFQiJBSQSJD74WtTSzVEIk+vYqNDjPcir0H2Br5e3Z7hPkJa4hqPNvP4CQRz9ntua/LLY5ELZrZiys2blCd1P0Fs/ZK44XLEXjkAezZ12ymjx3v+UyY1cXhhTZ34+uq8nDsJNc4jfBhH6XrgEjkv2sZZBd/rA9estQ3A+IXvwMQu9dx/il3DveMvkd77Wu9HlwUZ0Idts0Bb6l0L1Jk=";
-    //System.getenv("SSH_Connections_Public_Key");
+    private static final String knownHostPublicKey = BuildConfig.SSH_Connections_Public_Key;
 
     private static PreparedStatement ps = null;
     private static Statement st = null;
@@ -40,8 +42,8 @@ public class DbManagerSSH {
     private static Connection con;
     private static Session session;
 
-    private static final String databaseUsername = "dbpeople";
-    private static final String databasePassword = "helloworld2022";
+    private static final String databaseUsername = BuildConfig.db_default_user;
+    private static final String databasePassword = BuildConfig.dbpassword;
 
     /**
      * Construye un tunel de acceso seguro mediante SSH de tipo cifrado para
@@ -54,10 +56,9 @@ public class DbManagerSSH {
      */
     @RequiresApi(api = Build.VERSION_CODES.R)
     public static Connection conectar(String file) throws JSchException, SQLException, IOException, ClassNotFoundException {
-        String jumpserverHost = "158.101.98.158";
-        String jumpserverUsername = "opc";
-
-        String databaseHost = "localhost";
+        String jumpserverHost = BuildConfig.sshjump_host;
+        String jumpserverUsername = BuildConfig.sshjumpserverUsername;
+        String databaseHost = BuildConfig.databasehost;
         int databasePort = 3306;
 
         JSch jsch = new JSch();
