@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+/app/src/main/assets/ssh.key
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
