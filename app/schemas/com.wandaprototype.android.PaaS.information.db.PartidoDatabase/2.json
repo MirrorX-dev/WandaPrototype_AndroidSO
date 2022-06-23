@@ -1,0 +1,101 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "a8348fb7460e7a8c5bd53ba8826136a9",
+    "entities": [
+      {
+        "tableName": "partido",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_partido` TEXT NOT NULL, `idpartido` TEXT NOT NULL, `elocal` TEXT NOT NULL, `evisit` TEXT NOT NULL, `contenido` TEXT NOT NULL, `fpartido` TEXT NOT NULL, `hpartido` TEXT NOT NULL, `epartido` TEXT NOT NULL, PRIMARY KEY(`id_partido`))",
+        "fields": [
+          {
+            "fieldPath": "id_partido",
+            "columnName": "id_partido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "competicion",
+            "columnName": "idpartido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipolocal",
+            "columnName": "elocal",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipovisitante",
+            "columnName": "evisit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jornada",
+            "columnName": "contenido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechapartido",
+            "columnName": "fpartido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "horapartido",
+            "columnName": "hpartido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estadiopartido",
+            "columnName": "epartido",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_partido"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "partidoVersions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`vnumber` INTEGER NOT NULL, `vdate` TEXT NOT NULL, PRIMARY KEY(`vnumber`))",
+        "fields": [
+          {
+            "fieldPath": "version_number",
+            "columnName": "vnumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version_date",
+            "columnName": "vdate",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "vnumber"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"a8348fb7460e7a8c5bd53ba8826136a9\")"
+    ]
+  }
+}

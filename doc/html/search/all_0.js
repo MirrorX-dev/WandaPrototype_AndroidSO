@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['activitymainbinding_0',['ActivityMainBinding',['../classcom_1_1wandaprototype_1_1databinding_1_1_activity_main_binding.html',1,'com::wandaprototype::databinding']]],
+  ['activitypartidosbinding_1',['ActivityPartidosBinding',['../classcom_1_1wandaprototype_1_1databinding_1_1_activity_partidos_binding.html',1,'com::wandaprototype::databinding']]],
+  ['addpartido_2',['addPartido',['../classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_lab.html#a1727f476233453137d3e3e52688c6813',1,'com::wandaprototype::android::PaaS::information::db::PartidoLab']]],
+  ['addpartidoversions_3',['addPartidoVersions',['../classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_d_a_o_partido_versions_dao___impl.html#a3b143129a15f3c9d5292616d259a021b',1,'com.wandaprototype.android.PaaS.information.db.PartidoVersionsDAOPartidoVersionsDao_Impl.addPartidoVersions()'],['../interfacecom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_d_a_o_1_1_partido_versions_dao.html#a9a517f91bf54026173f689264563020d',1,'com.wandaprototype.android.PaaS.information.db.PartidoVersionsDAO.PartidoVersionsDao.addPartidoVersions()'],['../classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_lab.html#ad7a3dc162b29145c6f9e1c6aa02a6502',1,'com.wandaprototype.android.PaaS.information.db.PartidoVersionsLab.addPartidoVersions()']]]
+];

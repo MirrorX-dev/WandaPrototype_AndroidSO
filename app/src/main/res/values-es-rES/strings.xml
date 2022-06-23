@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Metropolitano ISS</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+    <string name="second_fragment_label">Segundo fragmento</string>
+    <string name="first_fragment_label">Primer fragmento</string>
+    <string name="title_activity_partidos">Acitividad Partidos</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="hello_second_fragment">Hola segundo fragmento</string>
+    <string name="hello_first_fragment">Hola primer fragmento</string>
+    <string name="error_messages_002">Ningun evento/partido cercano ha sido confirmado. Identificador de error: 002.</string>
+    <string name="error_messages_001">Debes conectarte a internet para poder acceder a los partidos/eventos. Por favor, conectese a internet y reinicie la aplicación. Indetificador de error: 001.</string>
+    <string name="error_messages_003">¡Hola! Bienvenido, tras la actualización es posible que los datos de partidos/eventos no esten disponible. ¡Ahora recibirás la información de partidos/eventos más actual! Identificador de error: 003.</string>
+    <string name="event_information_AT">a las</string>
+</resources>

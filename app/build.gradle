@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId 'com.wandaprototype'
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        // Sets Java compatibility to Java 8
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    //noinspection GradleDependency
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    //noinspection GradleDependency
+    implementation 'com.google.android.material:material:1.5.0'
+    //noinspection GradleDependency
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'junit:junit:4.13.2'
+    implementation 'androidx.test.ext:junit:1.1.3'
+    implementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // https://mvnrepository.com/artifact/com.jcraft/jsch
+    implementation group: 'com.jcraft', name: 'jsch', version: '0.1.55'
+
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.14.3'
+    implementation("com.google.guava:guava:31.1-jre")
+
+    //Google Maps and API Keys
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'androidx.core:core-ktx:1.8.0'
+
+    //Alternative Maps.
+    implementation 'com.mapbox.maps:android:10.4.3'
+    //noinspection GradleDependency
+    implementation("com.google.android.gms:play-services-location:18.0.0")
+
+    //Calendar View Widget
+    implementation 'com.github.shrikanth7698:Collapsible-Calendar-View-Android:v1.0.3'
+
+    //DBUtils
+    implementation 'commons-dbutils:commons-dbutils:1.7'
+    //noinspection GradleDependency
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    //noinspection GradleDependency
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //Android Room
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    //implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
+    //noinspection GradleDependency
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.49'
+}

@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['addpartido_0',['addPartido',['../classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_lab.html#a1727f476233453137d3e3e52688c6813',1,'com::wandaprototype::android::PaaS::information::db::PartidoLab']]],
+  ['addpartidoversions_1',['addPartidoVersions',['../classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_d_a_o_partido_versions_dao___impl.html#a3b143129a15f3c9d5292616d259a021b',1,'com.wandaprototype.android.PaaS.information.db.PartidoVersionsDAOPartidoVersionsDao_Impl.addPartidoVersions()'],['../interfacecom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_d_a_o_1_1_partido_versions_dao.html#a9a517f91bf54026173f689264563020d',1,'com.wandaprototype.android.PaaS.information.db.PartidoVersionsDAO.PartidoVersionsDao.addPartidoVersions()'],['../classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_lab.html#ad7a3dc162b29145c6f9e1c6aa02a6502',1,'com.wandaprototype.android.PaaS.information.db.PartidoVersionsLab.addPartidoVersions()']]]
+];
