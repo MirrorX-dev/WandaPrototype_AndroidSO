@@ -1,0 +1,755 @@
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56__Changes_.xml	(revision 94aa0107721b88afa56df1ec3be3949e63e04df0)
++++ /dev/null	(revision 94aa0107721b88afa56df1ec3be3949e63e04df0)
+@@ -1,9 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_15_06_2022_16_56_[Changes]" date="1655305020491" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 15/06/2022 16:56 [Changes]" />
+-  <binary>
+-    <option name="BEFORE_PATH" value=".idea/.name" />
+-    <option name="AFTER_PATH" />
+-    <option name="SHELVED_PATH" />
+-  </binary>
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_06_2022_16_56_[Changes]/shelved.patch	(revision 94aa0107721b88afa56df1ec3be3949e63e04df0)
++++ /dev/null	(revision 94aa0107721b88afa56df1ec3be3949e63e04df0)
+@@ -1,731 +0,0 @@
+-Index: app/src/test/java/com/wandaprototype/ExampleUnitTest.java
+-===================================================================
+-diff --git a/app/src/test/java/com/wandaprototype/ExampleUnitTest.java b/app/src/test/java/com/wandaprototype/ExampleUnitTest.java
+-deleted file mode 100644
+---- a/app/src/test/java/com/wandaprototype/ExampleUnitTest.java	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ /dev/null	(revision b590cc15d66290f990ea118efb71d41896065313)
+-@@ -1,17 +0,0 @@
+--package com.wandaprototype;
+--
+--import org.junit.Test;
+--
+--import static org.junit.Assert.*;
+--
+--/**
+-- * Example local unit test, which will execute on the development machine (host).
+-- *
+-- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+-- */
+--public class ExampleUnitTest {
+--    @Test
+--    public void addition_isCorrect() {
+--        assertEquals(4, 2 + 2);
+--    }
+--}
+-\ No newline at end of file
+-Index: app/src/test/java/com/wandaprototype/MainActivityTest.java
+-===================================================================
+-diff --git a/app/src/test/java/com/wandaprototype/MainActivityTest.java b/app/src/test/java/com/wandaprototype/MainActivityTest.java
+-deleted file mode 100644
+---- a/app/src/test/java/com/wandaprototype/MainActivityTest.java	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ /dev/null	(revision b590cc15d66290f990ea118efb71d41896065313)
+-@@ -1,7 +0,0 @@
+--package com.wandaprototype;
+--
+--import junit.framework.TestCase;
+--
+--public class MainActivityTest extends TestCase {
+--
+--}
+-\ No newline at end of file
+-Index: .idea/.gitignore
+-===================================================================
+-diff --git a/.idea/.gitignore b/.idea/.gitignore
+-deleted file mode 100644
+---- a/.idea/.gitignore	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ /dev/null	(revision b590cc15d66290f990ea118efb71d41896065313)
+-@@ -1,3 +0,0 @@
+--# Default ignored files
+--/shelf/
+--/workspace.xml
+-Index: .idea/render.experimental.xml
+-===================================================================
+-diff --git a/.idea/render.experimental.xml b/.idea/render.experimental.xml
+-deleted file mode 100644
+---- a/.idea/render.experimental.xml	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ /dev/null	(revision b590cc15d66290f990ea118efb71d41896065313)
+-@@ -1,6 +0,0 @@
+--<?xml version="1.0" encoding="UTF-8"?>
+--<project version="4">
+--  <component name="RenderSettings">
+--    <option name="showDecorations" value="true" />
+--  </component>
+--</project>
+-\ No newline at end of file
+-Index: .idea/codeStyles/codeStyleConfig.xml
+-===================================================================
+-diff --git a/.idea/codeStyles/codeStyleConfig.xml b/.idea/codeStyles/codeStyleConfig.xml
+-deleted file mode 100644
+---- a/.idea/codeStyles/codeStyleConfig.xml	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ /dev/null	(revision b590cc15d66290f990ea118efb71d41896065313)
+-@@ -1,5 +0,0 @@
+--<component name="ProjectCodeStyleConfiguration">
+--  <state>
+--    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+--  </state>
+--</component>
+-\ No newline at end of file
+-Index: .idea/codeStyles/Project.xml
+-===================================================================
+-diff --git a/.idea/codeStyles/Project.xml b/.idea/codeStyles/Project.xml
+-deleted file mode 100644
+---- a/.idea/codeStyles/Project.xml	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ /dev/null	(revision b590cc15d66290f990ea118efb71d41896065313)
+-@@ -1,123 +0,0 @@
+--<component name="ProjectCodeStyleConfiguration">
+--  <code_scheme name="Project" version="173">
+--    <JetCodeStyleSettings>
+--      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+--    </JetCodeStyleSettings>
+--    <codeStyleSettings language="XML">
+--      <option name="FORCE_REARRANGE_MODE" value="1" />
+--      <indentOptions>
+--        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+--      </indentOptions>
+--      <arrangement>
+--        <rules>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>xmlns:android</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--            </rule>
+--          </section>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>xmlns:.*</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--              <order>BY_NAME</order>
+--            </rule>
+--          </section>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>.*:id</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--            </rule>
+--          </section>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>.*:name</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--            </rule>
+--          </section>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>name</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--            </rule>
+--          </section>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>style</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--            </rule>
+--          </section>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>.*</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--              <order>BY_NAME</order>
+--            </rule>
+--          </section>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>.*</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--              <order>ANDROID_ATTRIBUTE_ORDER</order>
+--            </rule>
+--          </section>
+--          <section>
+--            <rule>
+--              <match>
+--                <AND>
+--                  <NAME>.*</NAME>
+--                  <XML_ATTRIBUTE />
+--                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+--                </AND>
+--              </match>
+--              <order>BY_NAME</order>
+--            </rule>
+--          </section>
+--        </rules>
+--      </arrangement>
+--    </codeStyleSettings>
+--    <codeStyleSettings language="kotlin">
+--      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+--    </codeStyleSettings>
+--  </code_scheme>
+--</component>
+-\ No newline at end of file
+-Index: .idea/intellij-javadocs-4.0.1.xml
+-===================================================================
+-diff --git a/.idea/intellij-javadocs-4.0.1.xml b/.idea/intellij-javadocs-4.0.1.xml
+-deleted file mode 100644
+---- a/.idea/intellij-javadocs-4.0.1.xml	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ /dev/null	(revision b590cc15d66290f990ea118efb71d41896065313)
+-@@ -1,204 +0,0 @@
+--<?xml version="1.0" encoding="UTF-8"?>
+--<project version="4">
+--  <component name="JavaDocConfiguration">
+--    <GENERAL>
+--      <MODE>UPDATE</MODE>
+--      <OVERRIDDEN_METHODS>false</OVERRIDDEN_METHODS>
+--      <SPLITTED_CLASS_NAME>true</SPLITTED_CLASS_NAME>
+--      <LEVELS>
+--        <LEVEL>TYPE</LEVEL>
+--        <LEVEL>METHOD</LEVEL>
+--        <LEVEL>FIELD</LEVEL>
+--      </LEVELS>
+--      <VISIBILITIES>
+--        <VISIBILITY>PROTECTED</VISIBILITY>
+--        <VISIBILITY>PUBLIC</VISIBILITY>
+--        <VISIBILITY>DEFAULT</VISIBILITY>
+--      </VISIBILITIES>
+--    </GENERAL>
+--    <TEMPLATES>
+--      <CLASSES>
+--        <CLASS>
+--          <KEY>^.*(public|protected|private)*.+interface\s+\w+.*</KEY>
+--          <VALUE>/**\n
+-- * The interface ${name}.\n
+--&lt;#if element.typeParameters?has_content&gt;        * \n
+--&lt;/#if&gt;
+--&lt;#list element.typeParameters as typeParameter&gt;
+--        * @param &lt;${typeParameter.name}&gt; the type parameter\n
+--&lt;/#list&gt;
+-- */</VALUE>
+--        </CLASS>
+--        <CLASS>
+--          <KEY>^.*(public|protected|private)*.+enum\s+\w+.*</KEY>
+--          <VALUE>/**\n
+-- * The enum ${name}.\n
+-- */</VALUE>
+--        </CLASS>
+--        <CLASS>
+--          <KEY>^.*(public|protected|private)*.+class\s+\w+.*</KEY>
+--          <VALUE>/**\n
+-- * The type ${name}.\n
+--&lt;#if element.typeParameters?has_content&gt;        * \n
+--&lt;/#if&gt;
+--&lt;#list element.typeParameters as typeParameter&gt;
+--        * @param &lt;${typeParameter.name}&gt; the type parameter\n
+--&lt;/#list&gt;
+-- */</VALUE>
+--        </CLASS>
+--        <CLASS>
+--          <KEY>.+</KEY>
+--          <VALUE>/**\n
+-- * The type ${name}.\n
+-- */</VALUE>
+--        </CLASS>
+--      </CLASSES>
+--      <CONSTRUCTORS>
+--        <CONSTRUCTOR>
+--          <KEY>.+</KEY>
+--          <VALUE>/**\n
+-- * Instantiates a new ${name}.\n
+--&lt;#if element.parameterList.parameters?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.parameterList.parameters as parameter&gt;
+--         * @param ${parameter.name} the ${paramNames[parameter.name]}\n
+--&lt;/#list&gt;
+--&lt;#if element.throwsList.referenceElements?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.throwsList.referenceElements as exception&gt;
+--         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\n
+--&lt;/#list&gt;
+-- */</VALUE>
+--        </CONSTRUCTOR>
+--      </CONSTRUCTORS>
+--      <METHODS>
+--        <METHOD>
+--          <KEY>^.*(public|protected|private)*\s*.*(\w(\s*&lt;.+&gt;)*)+\s+get\w+\s*\(.*\).+</KEY>
+--          <VALUE>/**\n
+-- * Gets ${partName}.\n
+--&lt;#if element.typeParameters?has_content&gt;         * \n
+--&lt;/#if&gt;
+--&lt;#list element.typeParameters as typeParameter&gt;
+--         * @param &lt;${typeParameter.name}&gt; the type parameter\n
+--&lt;/#list&gt;
+--&lt;#if element.parameterList.parameters?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.parameterList.parameters as parameter&gt;
+--         * @param ${parameter.name} the ${paramNames[parameter.name]}\n
+--&lt;/#list&gt;
+--&lt;#if isNotVoid&gt;
+--         *\n
+--         * @return the ${partName}\n
+--&lt;/#if&gt;
+--&lt;#if element.throwsList.referenceElements?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.throwsList.referenceElements as exception&gt;
+--         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\n
+--&lt;/#list&gt;
+-- */</VALUE>
+--        </METHOD>
+--        <METHOD>
+--          <KEY>^.*(public|protected|private)*\s*.*(void|\w(\s*&lt;.+&gt;)*)+\s+set\w+\s*\(.*\).+</KEY>
+--          <VALUE>/**\n
+-- * Sets ${partName}.\n
+--&lt;#if element.typeParameters?has_content&gt;         * \n
+--&lt;/#if&gt;
+--&lt;#list element.typeParameters as typeParameter&gt;
+--         * @param &lt;${typeParameter.name}&gt; the type parameter\n
+--&lt;/#list&gt;
+--&lt;#if element.parameterList.parameters?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.parameterList.parameters as parameter&gt;
+--         * @param ${parameter.name} the ${paramNames[parameter.name]}\n
+--&lt;/#list&gt;
+--&lt;#if isNotVoid&gt;
+--         *\n
+--         * @return the ${partName}\n
+--&lt;/#if&gt;
+--&lt;#if element.throwsList.referenceElements?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.throwsList.referenceElements as exception&gt;
+--         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\n
+--&lt;/#list&gt;
+-- */</VALUE>
+--        </METHOD>
+--        <METHOD>
+--          <KEY>^.*((public\s+static)|(static\s+public))\s+void\s+main\s*\(\s*String\s*(\[\s*\]|\.\.\.)\s+\w+\s*\).+</KEY>
+--          <VALUE>/**\n
+-- * The entry point of application.\n
+--
+--     &lt;#if element.parameterList.parameters?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--     * @param ${element.parameterList.parameters[0].name} the input arguments\n
+--&lt;#if element.throwsList.referenceElements?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.throwsList.referenceElements as exception&gt;
+--         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\n
+--&lt;/#list&gt;
+-- */</VALUE>
+--        </METHOD>
+--        <METHOD>
+--          <KEY>.+</KEY>
+--          <VALUE>/**\n
+-- * ${name}&lt;#if isNotVoid&gt; ${return}&lt;/#if&gt;.\n
+--&lt;#if element.typeParameters?has_content&gt;         * \n
+--&lt;/#if&gt;
+--&lt;#list element.typeParameters as typeParameter&gt;
+--         * @param &lt;${typeParameter.name}&gt; the type parameter\n
+--&lt;/#list&gt;
+--&lt;#if element.parameterList.parameters?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.parameterList.parameters as parameter&gt;
+--         * @param ${parameter.name} the ${paramNames[parameter.name]}\n
+--&lt;/#list&gt;
+--&lt;#if isNotVoid&gt;
+--         *\n
+--         * @return the ${return}\n
+--&lt;/#if&gt;
+--&lt;#if element.throwsList.referenceElements?has_content&gt;
+--         *\n
+--&lt;/#if&gt;
+--&lt;#list element.throwsList.referenceElements as exception&gt;
+--         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\n
+--&lt;/#list&gt;
+-- */</VALUE>
+--        </METHOD>
+--      </METHODS>
+--      <FIELDS>
+--        <FIELD>
+--          <KEY>^.*(public|protected|private)*.+static.*(\w\s\w)+.+</KEY>
+--          <VALUE>/**\n
+-- * The constant ${element.getName()}.\n
+-- */</VALUE>
+--        </FIELD>
+--        <FIELD>
+--          <KEY>^.*(public|protected|private)*.*(\w\s\w)+.+</KEY>
+--          <VALUE>/**\n
+--    &lt;#if element.parent.isInterface()&gt;
+--        * The constant ${element.getName()}.\n
+--&lt;#else&gt;
+--        * The ${name}.\n
+--&lt;/#if&gt; */</VALUE>
+--        </FIELD>
+--        <FIELD>
+--          <KEY>.+</KEY>
+--          <VALUE>/**\n
+--    &lt;#if element.parent.isEnum()&gt;
+--        *${name} ${typeName}.\n
+--&lt;#else&gt;
+--        * The ${name}.\n
+--&lt;/#if&gt;*/</VALUE>
+--        </FIELD>
+--      </FIELDS>
+--    </TEMPLATES>
+--  </component>
+--</project>
+-\ No newline at end of file
+-Index: .idea/jarRepositories.xml
+-===================================================================
+-diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+-deleted file mode 100644
+---- a/.idea/jarRepositories.xml	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ /dev/null	(revision b590cc15d66290f990ea118efb71d41896065313)
+-@@ -1,20 +0,0 @@
+--<?xml version="1.0" encoding="UTF-8"?>
+--<project version="4">
+--  <component name="RemoteRepositoriesConfiguration">
+--    <remote-repository>
+--      <option name="id" value="central" />
+--      <option name="name" value="Maven Central repository" />
+--      <option name="url" value="https://repo1.maven.org/maven2" />
+--    </remote-repository>
+--    <remote-repository>
+--      <option name="id" value="jboss.community" />
+--      <option name="name" value="JBoss Community repository" />
+--      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+--    </remote-repository>
+--    <remote-repository>
+--      <option name="id" value="maven" />
+--      <option name="name" value="maven" />
+--      <option name="url" value="https://jitpack.io" />
+--    </remote-repository>
+--  </component>
+--</project>
+-\ No newline at end of file
+-Index: .idea/misc.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Users/Jesús_Workplace/.gradle/caches/transforms-3/fe5d1df2136494bbbfaced82c225ad81/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_solid_background.xml\" value=\"0.32083333333333336\" />\r\n        <entry key=\"..\\:/Users/Jesús_Workplace/Mi unidad/Proyecto_TFG/WandaPrototype/app/src/main/res/layout/activity_main.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/bg_rounded.xml\" value=\"0.309375\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/bg_rounded_main.xml\" value=\"0.3277777777777778\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/custom_border.xml\" value=\"0.36018518518518516\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/ic_launcher_background.xml\" value=\"0.3277777777777778\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/activity_main.xml\" value=\"0.3220108695652174\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/activity_maps.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/anotheractivity.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/calendar_day_layout.xml\" value=\"0.2453125\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/item_partidos.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/list_item.xml\" value=\"0.22\" />\r\n        <entry key=\"..\\:/Users/MRX-Workstation/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/MirrorX/.gradle/caches/transforms-3/3679bc731169ef0344a79b6b66e34dcc/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_solid_background.xml\" value=\"0.2055\" />\r\n        <entry key=\"..\\:/Users/MirrorX/.gradle/caches/transforms-3/3679bc731169ef0344a79b6b66e34dcc/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_stroke_background.xml\" value=\"0.2055\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/ic_baseline_menu_24.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/roundedbutton.xml\" value=\"0.2055\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/activity_main.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable-night/bg_rounded.xml\" value=\"0.2055\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable-night/bg_rounded_main.xml\" value=\"0.2045\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable-night/circle_dark_stroke_background.xml\" value=\"0.2045\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable-v24/ic_launcher_foreground.xml\" value=\"0.185\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/bg_rounded.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/bg_rounded_main.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/circle_dark_stroke_background.xml\" value=\"0.2055\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/custom_border.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/ic_baseline_menu_24.xml\" value=\"0.185\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/ic_launcher_background.xml\" value=\"0.185\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/roundedbutton.xml\" value=\"0.185\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout-land-night/activity_main.xml\" value=\"0.25\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout-land/activity_main.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout-night/activity_main.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout-night/list_item.xml\" value=\"0.19791666666666666\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/activity_main.xml\" value=\"0.25\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/activity_partidos.xml\" value=\"0.19791666666666666\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/content_partidos.xml\" value=\"0.19791666666666666\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/fragment_partidos.xml\" value=\"0.19791666666666666\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/list_item.xml\" value=\"0.15677083333333333\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/list_item_partido.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml\" value=\"0.185\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml\" value=\"0.107\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/activity_main.xml\" value=\"0.1802536231884058\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/anotheractivity.xml\" value=\"0.18\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/content_partidos.xml\" value=\"0.25\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/fragment_partidos.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/list_item_partido.xml\" value=\"0.1\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"JavadocGenerationManager\">\r\n    <option name=\"OUTPUT_DIRECTORY\" value=\"$PROJECT_DIR$/../../WandaPrototype\" />\r\n    <option name=\"OPTION_SCOPE\" value=\"package\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_USE\" value=\"true\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_AUTHOR\" value=\"true\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_VERSION\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/misc.xml b/.idea/misc.xml
+---- a/.idea/misc.xml	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/.idea/misc.xml	(date 1655304688009)
+-@@ -3,61 +3,15 @@
+-   <component name="DesignSurface">
+-     <option name="filePathToZoomLevelMap">
+-       <map>
+--        <entry key="..\:/Users/Jesús_Workplace/.gradle/caches/transforms-3/fe5d1df2136494bbbfaced82c225ad81/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_solid_background.xml" value="0.32083333333333336" />
+--        <entry key="..\:/Users/Jesús_Workplace/Mi unidad/Proyecto_TFG/WandaPrototype/app/src/main/res/layout/activity_main.xml" value="0.1" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/bg_rounded.xml" value="0.309375" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/bg_rounded_main.xml" value="0.3277777777777778" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/custom_border.xml" value="0.36018518518518516" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3277777777777778" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/activity_main.xml" value="0.3220108695652174" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/activity_maps.xml" value="0.3625" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/anotheractivity.xml" value="0.3625" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/calendar_day_layout.xml" value="0.2453125" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/item_partidos.xml" value="0.33" />
+--        <entry key="..\:/Users/MRX-Workstation/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/list_item.xml" value="0.22" />
+--        <entry key="..\:/Users/MRX-Workstation/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.1" />
+--        <entry key="..\:/Users/MirrorX/.gradle/caches/transforms-3/3679bc731169ef0344a79b6b66e34dcc/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_solid_background.xml" value="0.2055" />
+--        <entry key="..\:/Users/MirrorX/.gradle/caches/transforms-3/3679bc731169ef0344a79b6b66e34dcc/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_stroke_background.xml" value="0.2055" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/JSOUPTesting/app/src/main/res/drawable/roundedbutton.xml" value="0.2055" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/JSOUPTesting/app/src/main/res/layout/activity_main.xml" value="0.33" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable-night/bg_rounded.xml" value="0.2055" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable-night/bg_rounded_main.xml" value="0.2045" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable-night/circle_dark_stroke_background.xml" value="0.2045" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.185" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/bg_rounded.xml" value="0.1" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/bg_rounded_main.xml" value="0.1" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/circle_dark_stroke_background.xml" value="0.2055" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/custom_border.xml" value="0.1" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.185" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/ic_launcher_background.xml" value="0.185" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/drawable/roundedbutton.xml" value="0.185" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout-land-night/activity_main.xml" value="0.25" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout-land/activity_main.xml" value="0.33" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout-night/activity_main.xml" value="0.33" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout-night/list_item.xml" value="0.19791666666666666" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/activity_main.xml" value="0.25" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/activity_partidos.xml" value="0.19791666666666666" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/content_partidos.xml" value="0.19791666666666666" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/fragment_partidos.xml" value="0.19791666666666666" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/list_item.xml" value="0.15677083333333333" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/layout/list_item_partido.xml" value="0.33" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.185" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.107" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/activity_main.xml" value="0.1802536231884058" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/anotheractivity.xml" value="0.18" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/content_partidos.xml" value="0.25" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/fragment_partidos.xml" value="0.1" />
+--        <entry key="..\:/Users/MirrorX/AndroidStudioProjects/WandaPrototype/app/src/main/res/layout/list_item_partido.xml" value="0.1" />
+-+        <entry key="..\:/Users/MirrorX/Documents/WandaPrototype/app/src/main/res/layout-large/activity_main.xml" value="0.12099187687045745" />
+-+        <entry key="..\:/Users/MirrorX/Documents/WandaPrototype/app/src/main/res/layout-normal/activity_main.xml" value="0.22" />
+-+        <entry key="..\:/Users/MirrorX/Documents/WandaPrototype/app/src/main/res/layout-xlarge/activity_main.xml" value="0.110546875" />
+-+        <entry key="..\:/Users/MirrorX/Documents/WandaPrototype/app/src/main/res/layout/activity_main.xml" value="0.15" />
+-+        <entry key="..\:/Users/MirrorX/Mi unidad (jesusblc.bussines@gmail.com)/Proyecto_TFG/WandaPrototype/app/src/main/res/layout-normal/activity_main.xml" value="0.25" />
+-+        <entry key="..\:/Users/MirrorX/Mi unidad (jesusblc.bussines@gmail.com)/Proyecto_TFG/WandaPrototype/app/src/main/res/layout-normal/main_activity.xml" value="0.11776348342404751" />
+-+        <entry key="..\:/Users/MirrorX/Mi unidad (jesusblc.bussines@gmail.com)/Proyecto_TFG/WandaPrototype/app/src/main/res/layout/activity_main.xml" value="0.7400881057268722" />
+-       </map>
+-     </option>
+--  </component>
+--  <component name="JavadocGenerationManager">
+--    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../WandaPrototype" />
+--    <option name="OPTION_SCOPE" value="package" />
+--    <option name="OPTION_DOCUMENT_TAG_USE" value="true" />
+--    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
+--    <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
+-   </component>
+-   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+-     <output url="file://$PROJECT_DIR$/build/classes" />
+-Index: .idea/vcs.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+---- a/.idea/vcs.xml	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/.idea/vcs.xml	(date 1654885642098)
+-@@ -1,6 +1,6 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+-   <component name="VcsDirectoryMappings">
+--    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-+    <mapping directory="" vcs="Git" />
+-   </component>
+- </project>
+-\ No newline at end of file
+-Index: doc/html/hierarchy.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/xhtml;charset=UTF-8\"/>\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=11\"/>\r\n<meta name=\"generator\" content=\"Doxygen 1.9.4\"/>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\r\n<title>WandaPrototype: Class Hierarchy</title>\r\n<link href=\"tabs.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\" src=\"jquery.js\"></script>\r\n<script type=\"text/javascript\" src=\"dynsections.js\"></script>\r\n<link href=\"search/search.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\" src=\"search/searchdata.js\"></script>\r\n<script type=\"text/javascript\" src=\"search/search.js\"></script>\r\n<link href=\"doxygen.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n</head>\r\n<body>\r\n<div id=\"top\"><!-- do not remove this div, it is closed by doxygen! -->\r\n<div id=\"titlearea\">\r\n<table cellspacing=\"0\" cellpadding=\"0\">\r\n <tbody>\r\n <tr id=\"projectrow\">\r\n  <td id=\"projectalign\">\r\n   <div id=\"projectname\">WandaPrototype<span id=\"projectnumber\">&#160;0.0.4</span>\r\n   </div>\r\n  </td>\r\n </tr>\r\n </tbody>\r\n</table>\r\n</div>\r\n<!-- end header part -->\r\n<!-- Generated by Doxygen 1.9.4 -->\r\n<script type=\"text/javascript\">\r\n/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */\r\nvar searchBox = new SearchBox(\"searchBox\", \"search\",'Search','.html');\r\n/* @license-end */\r\n</script>\r\n<script type=\"text/javascript\" src=\"menudata.js\"></script>\r\n<script type=\"text/javascript\" src=\"menu.js\"></script>\r\n<script type=\"text/javascript\">\r\n/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */\r\n$(function() {\r\n  initMenu('',true,false,'search.php','Search');\r\n  $(document).ready(function() { init_search(); });\r\n});\r\n/* @license-end */\r\n</script>\r\n<div id=\"main-nav\"></div>\r\n</div><!-- top -->\r\n<!-- window showing the filter options -->\r\n<div id=\"MSearchSelectWindow\"\r\n     onmouseover=\"return searchBox.OnSearchSelectShow()\"\r\n     onmouseout=\"return searchBox.OnSearchSelectHide()\"\r\n     onkeydown=\"return searchBox.OnSearchSelectKey(event)\">\r\n</div>\r\n\r\n<!-- iframe showing the search results (closed by default) -->\r\n<div id=\"MSearchResultsWindow\">\r\n<iframe src=\"javascript:void(0)\" frameborder=\"0\" \r\n        name=\"MSearchResults\" id=\"MSearchResults\">\r\n</iframe>\r\n</div>\r\n\r\n<div class=\"header\">\r\n  <div class=\"headertitle\"><div class=\"title\">Class Hierarchy</div></div>\r\n</div><!--header-->\r\n<div class=\"contents\">\r\n<div class=\"textblock\">\r\n<p><a href=\"inherits.html\">Go to the graphical class hierarchy</a></p>\r\nThis inheritance list is sorted roughly, but not completely, alphabetically:</div><div class=\"directory\">\r\n<div class=\"levels\">[detail level <span onclick=\"javascript:toggleLevel(1);\">1</span><span onclick=\"javascript:toggleLevel(2);\">2</span>]</div><table class=\"directory\">\r\n<tr id=\"row_0_\" class=\"even\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_build_config.html\" target=\"_self\">com.wandaprototype.BuildConfig</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_1_\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"interfacecom_1_1wandaprototype_1_1android_1_1dataformat_1_1_dame_datos_fecha.html\" target=\"_self\">com.wandaprototype.android.dataformat.DameDatosFecha</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_2_\" class=\"even\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1dataformat_1_1_dame_fecha.html\" target=\"_self\">com.wandaprototype.android.dataformat.DameFecha</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_3_\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h.html\" target=\"_self\">com.wandaprototype.android.IaaS.information.db.DbManagerSSH</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_4_\" class=\"even\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_example_instrumented_test.html\" target=\"_self\">com.wandaprototype.ExampleInstrumentedTest</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_5_\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_example_unit_test.html\" target=\"_self\">com.wandaprototype.ExampleUnitTest</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_6_\" class=\"even\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1objects_1_1_partido.html\" target=\"_self\">com.wandaprototype.android.objects.Partido</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_7_\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"interfacecom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_d_a_o.html\" target=\"_self\">com.wandaprototype.android.PaaS.information.db.PartidoDAO</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_8_\" class=\"even\"><td class=\"entry\"><span style=\"width:0px;display:inline-block;\">&#160;</span><span id=\"arr_8_\" class=\"arrow\" onclick=\"toggleFolder('8_')\">&#9660;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"interfacecom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_d_a_o_1_1_partido_dao.html\" target=\"_self\">com.wandaprototype.android.PaaS.information.db.PartidoDAO.PartidoDao</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_8_0_\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_d_a_o_partido_dao___impl.html\" target=\"_self\">com.wandaprototype.android.PaaS.information.db.PartidoDAOPartidoDao_Impl</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_9_\" class=\"even\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_lab.html\" target=\"_self\">com.wandaprototype.android.PaaS.information.db.PartidoLab</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_10_\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1objects_1_1_partido_versions.html\" target=\"_self\">com.wandaprototype.android.objects.PartidoVersions</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_11_\" class=\"even\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"interfacecom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_d_a_o.html\" target=\"_self\">com.wandaprototype.android.PaaS.information.db.PartidoVersionsDAO</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_12_\"><td class=\"entry\"><span style=\"width:0px;display:inline-block;\">&#160;</span><span id=\"arr_12_\" class=\"arrow\" onclick=\"toggleFolder('12_')\">&#9660;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"interfacecom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_d_a_o_1_1_partido_versions_dao.html\" target=\"_self\">com.wandaprototype.android.PaaS.information.db.PartidoVersionsDAO.PartidoVersionsDao</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_12_0_\" class=\"even\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_d_a_o_partido_versions_dao___impl.html\" target=\"_self\">com.wandaprototype.android.PaaS.information.db.PartidoVersionsDAOPartidoVersionsDao_Impl</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_13_\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_versions_lab.html\" target=\"_self\">com.wandaprototype.android.PaaS.information.db.PartidoVersionsLab</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_14_\" class=\"even\"><td class=\"entry\"><span style=\"width:0px;display:inline-block;\">&#160;</span><span id=\"arr_14_\" class=\"arrow\" onclick=\"toggleFolder('14_')\">&#9660;</span><span class=\"icona\"><span class=\"icon\">C</span></span><b>AppCompatActivity</b></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_14_0_\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1android_1_1_main_activity.html\" target=\"_self\">com.wandaprototype.android.MainActivity</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_15_\" class=\"even\"><td class=\"entry\"><span style=\"width:16px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><b>RoomDatabase</b></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_16_\"><td class=\"entry\"><span style=\"width:0px;display:inline-block;\">&#160;</span><span id=\"arr_16_\" class=\"arrow\" onclick=\"toggleFolder('16_')\">&#9660;</span><span class=\"icona\"><span class=\"icon\">C</span></span><b>TestCase</b></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_16_0_\" class=\"even\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_main_activity_test.html\" target=\"_self\">com.wandaprototype.MainActivityTest</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_17_\"><td class=\"entry\"><span style=\"width:0px;display:inline-block;\">&#160;</span><span id=\"arr_17_\" class=\"arrow\" onclick=\"toggleFolder('17_')\">&#9660;</span><span class=\"icona\"><span class=\"icon\">C</span></span><b>ViewBinding</b></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_17_0_\" class=\"even\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1databinding_1_1_activity_main_binding.html\" target=\"_self\">com.wandaprototype.databinding.ActivityMainBinding</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_17_1_\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1databinding_1_1_activity_partidos_binding.html\" target=\"_self\">com.wandaprototype.databinding.ActivityPartidosBinding</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_17_2_\" class=\"even\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1databinding_1_1_content_partidos_binding.html\" target=\"_self\">com.wandaprototype.databinding.ContentPartidosBinding</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_17_3_\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1databinding_1_1_fragment_partidos_binding.html\" target=\"_self\">com.wandaprototype.databinding.FragmentPartidosBinding</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_17_4_\" class=\"even\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1databinding_1_1_list_item_binding.html\" target=\"_self\">com.wandaprototype.databinding.ListItemBinding</a></td><td class=\"desc\"></td></tr>\r\n<tr id=\"row_17_5_\"><td class=\"entry\"><span style=\"width:32px;display:inline-block;\">&#160;</span><span class=\"icona\"><span class=\"icon\">C</span></span><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1databinding_1_1_list_item_partido_binding.html\" target=\"_self\">com.wandaprototype.databinding.ListItemPartidoBinding</a></td><td class=\"desc\"></td></tr>\r\n</table>\r\n</div><!-- directory -->\r\n</div><!-- contents -->\r\n<!-- start footer part -->\r\n<hr class=\"footer\"/><address class=\"footer\"><small>\r\nGenerated by&#160;<a href=\"https://www.doxygen.org/index.html\"><img class=\"footer\" src=\"doxygen.svg\" width=\"104\" height=\"31\" alt=\"doxygen\"/></a> 1.9.4\r\n</small></address>\r\n</body>\r\n</html>\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/doc/html/hierarchy.html b/doc/html/hierarchy.html
+---- a/doc/html/hierarchy.html	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/doc/html/hierarchy.html	(date 1654799668000)
+-@@ -73,7 +73,7 @@
+- <tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="interfacecom_1_1wandaprototype_1_1android_1_1dataformat_1_1_dame_datos_fecha.html" target="_self">com.wandaprototype.android.dataformat.DameDatosFecha</a></td><td class="desc"></td></tr>
+- <tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcom_1_1wandaprototype_1_1android_1_1dataformat_1_1_dame_fecha.html" target="_self">com.wandaprototype.android.dataformat.DameFecha</a></td><td class="desc"></td></tr>
+- <tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcom_1_1wandaprototype_1_1android_1_1_iaa_s_1_1information_1_1db_1_1_db_manager_s_s_h.html" target="_self">com.wandaprototype.android.IaaS.information.db.DbManagerSSH</a></td><td class="desc"></td></tr>
+--<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcom_1_1wandaprototype_1_1_example_instrumented_test.html" target="_self">com.wandaprototype.ExampleInstrumentedTest</a></td><td class="desc"></td></tr>
+-+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcom_1_1wandaprototype_1_1_example_instrumented_test.html" target="_self">com.wandaprototype.home_screen_Test</a></td><td class="desc"></td></tr>
+- <tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcom_1_1wandaprototype_1_1_example_unit_test.html" target="_self">com.wandaprototype.ExampleUnitTest</a></td><td class="desc"></td></tr>
+- <tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classcom_1_1wandaprototype_1_1android_1_1objects_1_1_partido.html" target="_self">com.wandaprototype.android.objects.Partido</a></td><td class="desc"></td></tr>
+- <tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="interfacecom_1_1wandaprototype_1_1android_1_1_paa_s_1_1information_1_1db_1_1_partido_d_a_o.html" target="_self">com.wandaprototype.android.PaaS.information.db.PartidoDAO</a></td><td class="desc"></td></tr>
+-Index: doc/latex/classcom_1_1wandaprototype_1_1_example_instrumented_test.tex
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>\\hypertarget{classcom_1_1wandaprototype_1_1_example_instrumented_test}{}\\doxysection{com.\\+wandaprototype.\\+Example\\+Instrumented\\+Test Class Reference}\r\n\\label{classcom_1_1wandaprototype_1_1_example_instrumented_test}\\index{com.wandaprototype.ExampleInstrumentedTest@{com.wandaprototype.ExampleInstrumentedTest}}\r\n\\doxysubsection*{Public Member Functions}\r\n\\begin{DoxyCompactItemize}\r\n\\item \r\n\\mbox{\\Hypertarget{classcom_1_1wandaprototype_1_1_example_instrumented_test_aab4d7f2e7ad1269b3f11c413f1a23114}\\label{classcom_1_1wandaprototype_1_1_example_instrumented_test_aab4d7f2e7ad1269b3f11c413f1a23114}} \r\nvoid {\\bfseries use\\+App\\+Context} ()\r\n\\end{DoxyCompactItemize}\r\n\r\n\r\n\\doxysubsection{Detailed Description}\r\nInstrumented test, which will execute on an Android device.\r\n\r\n\\begin{DoxySeeAlso}{See also}\r\n\\href{http://d.android.com/tools/testing}{\\texttt{ Testing documentation}} \r\n\\end{DoxySeeAlso}\r\n\r\n\r\nThe documentation for this class was generated from the following file\\+:\\begin{DoxyCompactItemize}\r\n\\item \r\nC\\+:/\\+Users/\\+Mirror\\+X/\\+Android\\+Studio\\+Projects/\\+Sincronizados/\\+Wanda\\+Prototype/app/src/android\\+Test/java/com/wandaprototype/Example\\+Instrumented\\+Test.\\+java\\end{DoxyCompactItemize}\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/doc/latex/classcom_1_1wandaprototype_1_1_example_instrumented_test.tex b/doc/latex/classcom_1_1wandaprototype_1_1_example_instrumented_test.tex
+---- a/doc/latex/classcom_1_1wandaprototype_1_1_example_instrumented_test.tex	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/doc/latex/classcom_1_1wandaprototype_1_1_example_instrumented_test.tex	(date 1654799668000)
+-@@ -1,5 +1,5 @@
+- \hypertarget{classcom_1_1wandaprototype_1_1_example_instrumented_test}{}\doxysection{com.\+wandaprototype.\+Example\+Instrumented\+Test Class Reference}
+--\label{classcom_1_1wandaprototype_1_1_example_instrumented_test}\index{com.wandaprototype.ExampleInstrumentedTest@{com.wandaprototype.ExampleInstrumentedTest}}
+-+\label{classcom_1_1wandaprototype_1_1_example_instrumented_test}\index{com.wandaprototype.home_screen_Test@{com.wandaprototype.home_screen_Test}}
+- \doxysubsection*{Public Member Functions}
+- \begin{DoxyCompactItemize}
+- \item 
+-Index: app/build.gradle
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>plugins {\r\n    id 'com.android.application'\r\n    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'\r\n}\r\napply plugin: 'kotlin-android'\r\n\r\nandroid {\r\n    compileSdk 31\r\n\r\n    defaultConfig {\r\n        applicationId 'com.wandaprototype'\r\n        minSdk 23\r\n        targetSdk 31\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n\r\n        javaCompileOptions {\r\n            annotationProcessorOptions {\r\n                arguments = [\"room.schemaLocation\": \"$projectDir/schemas\".toString()]\r\n            }\r\n        }\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        // Sets Java compatibility to Java 8\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n    buildFeatures {\r\n        viewBinding true\r\n    }\r\n}\r\n\r\ndependencies {\r\n    //noinspection GradleDependency\r\n    implementation 'androidx.appcompat:appcompat:1.4.1'\r\n    //noinspection GradleDependency\r\n    implementation 'com.google.android.material:material:1.5.0'\r\n    //noinspection GradleDependency\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'\r\n    implementation 'junit:junit:4.13.2'\r\n    implementation 'androidx.test.ext:junit:1.1.3'\r\n    implementation 'androidx.test.espresso:espresso-core:3.4.0'\r\n\r\n    // https://mvnrepository.com/artifact/com.jcraft/jsch\r\n    implementation group: 'com.jcraft', name: 'jsch', version: '0.1.55'\r\n\r\n    // https://mvnrepository.com/artifact/org.jsoup/jsoup\r\n    implementation group: 'org.jsoup', name: 'jsoup', version: '1.14.3'\r\n    implementation(\"com.google.guava:guava:31.1-jre\")\r\n\r\n    //Google Maps and API Keys\r\n    implementation 'com.google.android.gms:play-services-maps:18.0.2'\r\n    implementation 'androidx.core:core-ktx:1.8.0'\r\n\r\n    //Alternative Maps.\r\n    implementation 'com.mapbox.maps:android:10.4.3'\r\n    //noinspection GradleDependency\r\n    implementation(\"com.google.android.gms:play-services-location:18.0.0\")\r\n\r\n    //Calendar View Widget\r\n    implementation 'com.github.shrikanth7698:Collapsible-Calendar-View-Android:v1.0.3'\r\n\r\n    //DBUtils\r\n    implementation 'commons-dbutils:commons-dbutils:1.7'\r\n    //noinspection GradleDependency\r\n    implementation 'androidx.navigation:navigation-fragment:2.3.5'\r\n    //noinspection GradleDependency\r\n    implementation 'androidx.navigation:navigation-ui:2.3.5'\r\n    implementation 'androidx.legacy:legacy-support-v4:1.0.0'\r\n\r\n    //Android Room\r\n    implementation 'android.arch.persistence.room:runtime:1.1.1'\r\n    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'\r\n\r\n    // https://mvnrepository.com/artifact/mysql/mysql-connector-java\r\n    //implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'\r\n    //noinspection GradleDependency\r\n    implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.49'\r\n\r\n\r\n\r\n}
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/app/build.gradle b/app/build.gradle
+---- a/app/build.gradle	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/app/build.gradle	(date 1654799488000)
+-@@ -78,6 +78,8 @@
+- 
+-     //Android Room
+-     implementation 'android.arch.persistence.room:runtime:1.1.1'
+-+    testImplementation 'org.junit.jupiter:junit-jupiter'
+-+    testImplementation 'org.junit.jupiter:junit-jupiter'
+-     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+- 
+-     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+-Index: doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/xhtml;charset=UTF-8\"/>\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=11\"/>\r\n<meta name=\"generator\" content=\"Doxygen 1.9.4\"/>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\r\n<title>WandaPrototype: com.wandaprototype.ExampleInstrumentedTest Class Reference</title>\r\n<link href=\"tabs.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\" src=\"jquery.js\"></script>\r\n<script type=\"text/javascript\" src=\"dynsections.js\"></script>\r\n<link href=\"search/search.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\" src=\"search/searchdata.js\"></script>\r\n<script type=\"text/javascript\" src=\"search/search.js\"></script>\r\n<link href=\"doxygen.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n</head>\r\n<body>\r\n<div id=\"top\"><!-- do not remove this div, it is closed by doxygen! -->\r\n<div id=\"titlearea\">\r\n<table cellspacing=\"0\" cellpadding=\"0\">\r\n <tbody>\r\n <tr id=\"projectrow\">\r\n  <td id=\"projectalign\">\r\n   <div id=\"projectname\">WandaPrototype<span id=\"projectnumber\">&#160;0.0.4</span>\r\n   </div>\r\n  </td>\r\n </tr>\r\n </tbody>\r\n</table>\r\n</div>\r\n<!-- end header part -->\r\n<!-- Generated by Doxygen 1.9.4 -->\r\n<script type=\"text/javascript\">\r\n/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */\r\nvar searchBox = new SearchBox(\"searchBox\", \"search\",'Search','.html');\r\n/* @license-end */\r\n</script>\r\n<script type=\"text/javascript\" src=\"menudata.js\"></script>\r\n<script type=\"text/javascript\" src=\"menu.js\"></script>\r\n<script type=\"text/javascript\">\r\n/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */\r\n$(function() {\r\n  initMenu('',true,false,'search.php','Search');\r\n  $(document).ready(function() { init_search(); });\r\n});\r\n/* @license-end */\r\n</script>\r\n<div id=\"main-nav\"></div>\r\n<!-- window showing the filter options -->\r\n<div id=\"MSearchSelectWindow\"\r\n     onmouseover=\"return searchBox.OnSearchSelectShow()\"\r\n     onmouseout=\"return searchBox.OnSearchSelectHide()\"\r\n     onkeydown=\"return searchBox.OnSearchSelectKey(event)\">\r\n</div>\r\n\r\n<!-- iframe showing the search results (closed by default) -->\r\n<div id=\"MSearchResultsWindow\">\r\n<iframe src=\"javascript:void(0)\" frameborder=\"0\" \r\n        name=\"MSearchResults\" id=\"MSearchResults\">\r\n</iframe>\r\n</div>\r\n\r\n<div id=\"nav-path\" class=\"navpath\">\r\n  <ul>\r\n<li class=\"navelem\"><b>com</b></li><li class=\"navelem\"><a class=\"el\" href=\"namespacecom_1_1wandaprototype.html\">wandaprototype</a></li><li class=\"navelem\"><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_example_instrumented_test.html\">ExampleInstrumentedTest</a></li>  </ul>\r\n</div>\r\n</div><!-- top -->\r\n<div class=\"header\">\r\n  <div class=\"summary\">\r\n<a href=\"#pub-methods\">Public Member Functions</a> &#124;\r\n<a href=\"classcom_1_1wandaprototype_1_1_example_instrumented_test-members.html\">List of all members</a>  </div>\r\n  <div class=\"headertitle\"><div class=\"title\">com.wandaprototype.ExampleInstrumentedTest Class Reference</div></div>\r\n</div><!--header-->\r\n<div class=\"contents\">\r\n<table class=\"memberdecls\">\r\n<tr class=\"heading\"><td colspan=\"2\"><h2 class=\"groupheader\"><a id=\"pub-methods\" name=\"pub-methods\"></a>\r\nPublic Member Functions</h2></td></tr>\r\n<tr class=\"memitem:aab4d7f2e7ad1269b3f11c413f1a23114\"><td class=\"memItemLeft\" align=\"right\" valign=\"top\"><a id=\"aab4d7f2e7ad1269b3f11c413f1a23114\" name=\"aab4d7f2e7ad1269b3f11c413f1a23114\"></a>\r\nvoid&#160;</td><td class=\"memItemRight\" valign=\"bottom\"><b>useAppContext</b> ()</td></tr>\r\n<tr class=\"separator:aab4d7f2e7ad1269b3f11c413f1a23114\"><td class=\"memSeparator\" colspan=\"2\">&#160;</td></tr>\r\n</table>\r\n<a name=\"details\" id=\"details\"></a><h2 class=\"groupheader\">Detailed Description</h2>\r\n<div class=\"textblock\"><p >Instrumented test, which will execute on an Android device.</p>\r\n<dl class=\"section see\"><dt>See also</dt><dd><a href=\"http://d.android.com/tools/testing\">Testing documentation</a> </dd></dl>\r\n</div><hr/>The documentation for this class was generated from the following file:<ul>\r\n<li>C:/Users/MirrorX/AndroidStudioProjects/Sincronizados/WandaPrototype/app/src/androidTest/java/com/wandaprototype/ExampleInstrumentedTest.java</li>\r\n</ul>\r\n</div><!-- contents -->\r\n<!-- start footer part -->\r\n<hr class=\"footer\"/><address class=\"footer\"><small>\r\nGenerated by&#160;<a href=\"https://www.doxygen.org/index.html\"><img class=\"footer\" src=\"doxygen.svg\" width=\"104\" height=\"31\" alt=\"doxygen\"/></a> 1.9.4\r\n</small></address>\r\n</body>\r\n</html>\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test.html b/doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test.html
+---- a/doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test.html	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test.html	(date 1654799668000)
+-@@ -5,7 +5,7 @@
+- <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+- <meta name="generator" content="Doxygen 1.9.4"/>
+- <meta name="viewport" content="width=device-width, initial-scale=1"/>
+--<title>WandaPrototype: com.wandaprototype.ExampleInstrumentedTest Class Reference</title>
+-+<title>WandaPrototype: com.wandaprototype.home_screen_Test Class Reference</title>
+- <link href="tabs.css" rel="stylesheet" type="text/css"/>
+- <script type="text/javascript" src="jquery.js"></script>
+- <script type="text/javascript" src="dynsections.js"></script>
+-@@ -69,7 +69,7 @@
+-   <div class="summary">
+- <a href="#pub-methods">Public Member Functions</a> &#124;
+- <a href="classcom_1_1wandaprototype_1_1_example_instrumented_test-members.html">List of all members</a>  </div>
+--  <div class="headertitle"><div class="title">com.wandaprototype.ExampleInstrumentedTest Class Reference</div></div>
+-+  <div class="headertitle"><div class="title">com.wandaprototype.home_screen_Test Class Reference</div></div>
+- </div><!--header-->
+- <div class="contents">
+- <table class="memberdecls">
+-Index: app/src/androidTest/java/com/wandaprototype/ExampleInstrumentedTest.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/app/src/androidTest/java/com/wandaprototype/ExampleInstrumentedTest.java b/app/src/androidTest/java/com/wandaprototype/home_screen_Test.java
+-rename from app/src/androidTest/java/com/wandaprototype/ExampleInstrumentedTest.java
+-rename to app/src/androidTest/java/com/wandaprototype/home_screen_Test.java
+---- a/app/src/androidTest/java/com/wandaprototype/ExampleInstrumentedTest.java	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/app/src/androidTest/java/com/wandaprototype/home_screen_Test.java	(date 1654805734000)
+-@@ -5,22 +5,43 @@
+- import androidx.test.platform.app.InstrumentationRegistry;
+- import androidx.test.ext.junit.runners.AndroidJUnit4;
+- 
+-+import org.junit.Before;
+-+import org.junit.Rule;
+- import org.junit.Test;
+-+import org.junit.rules.ExpectedException;
+- import org.junit.runner.RunWith;
+- 
+- import static org.junit.Assert.*;
+- 
+-+import com.wandaprototype.android.MainActivity;
+-+import com.wandaprototype.android.PaaS.information.db.PartidoLab;
+-+import com.wandaprototype.android.objects.Partido;
+-+
+-+import java.util.List;
+-+
+- /**
+-  * Instrumented test, which will execute on an Android device.
+-  *
+-  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+-  */
+- @RunWith(AndroidJUnit4.class)
+--public class ExampleInstrumentedTest {
+-+public class home_screen_Test {
+-+
+-+    @Rule
+-+    public ExpectedException exception = ExpectedException.none();
+-+
+-+    @Test
+-+    public void throwsIllegalArgumentExceptionIfIconIsNull() {
+-+        exception.expect(IllegalArgumentException.class);
+-+        exception.expectMessage("Negative value not allowed");
+-+        MainActivity t = new MainActivity();
+-+        t.isEmptyPartidos();
+-+    }
+-+
+-     @Test
+-     public void useAppContext() {
+-         // Context of the app under test.
+-         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+--        assertEquals("com.camara.jsouptesting", appContext.getPackageName());
+-+        assertEquals("com.wandaprototype", appContext.getPackageName());
+-     }
+- }
+-\ No newline at end of file
+-Index: doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test-members.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/xhtml;charset=UTF-8\"/>\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=11\"/>\r\n<meta name=\"generator\" content=\"Doxygen 1.9.4\"/>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\r\n<title>WandaPrototype: Member List</title>\r\n<link href=\"tabs.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\" src=\"jquery.js\"></script>\r\n<script type=\"text/javascript\" src=\"dynsections.js\"></script>\r\n<link href=\"search/search.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\" src=\"search/searchdata.js\"></script>\r\n<script type=\"text/javascript\" src=\"search/search.js\"></script>\r\n<link href=\"doxygen.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n</head>\r\n<body>\r\n<div id=\"top\"><!-- do not remove this div, it is closed by doxygen! -->\r\n<div id=\"titlearea\">\r\n<table cellspacing=\"0\" cellpadding=\"0\">\r\n <tbody>\r\n <tr id=\"projectrow\">\r\n  <td id=\"projectalign\">\r\n   <div id=\"projectname\">WandaPrototype<span id=\"projectnumber\">&#160;0.0.4</span>\r\n   </div>\r\n  </td>\r\n </tr>\r\n </tbody>\r\n</table>\r\n</div>\r\n<!-- end header part -->\r\n<!-- Generated by Doxygen 1.9.4 -->\r\n<script type=\"text/javascript\">\r\n/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */\r\nvar searchBox = new SearchBox(\"searchBox\", \"search\",'Search','.html');\r\n/* @license-end */\r\n</script>\r\n<script type=\"text/javascript\" src=\"menudata.js\"></script>\r\n<script type=\"text/javascript\" src=\"menu.js\"></script>\r\n<script type=\"text/javascript\">\r\n/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */\r\n$(function() {\r\n  initMenu('',true,false,'search.php','Search');\r\n  $(document).ready(function() { init_search(); });\r\n});\r\n/* @license-end */\r\n</script>\r\n<div id=\"main-nav\"></div>\r\n<!-- window showing the filter options -->\r\n<div id=\"MSearchSelectWindow\"\r\n     onmouseover=\"return searchBox.OnSearchSelectShow()\"\r\n     onmouseout=\"return searchBox.OnSearchSelectHide()\"\r\n     onkeydown=\"return searchBox.OnSearchSelectKey(event)\">\r\n</div>\r\n\r\n<!-- iframe showing the search results (closed by default) -->\r\n<div id=\"MSearchResultsWindow\">\r\n<iframe src=\"javascript:void(0)\" frameborder=\"0\" \r\n        name=\"MSearchResults\" id=\"MSearchResults\">\r\n</iframe>\r\n</div>\r\n\r\n<div id=\"nav-path\" class=\"navpath\">\r\n  <ul>\r\n<li class=\"navelem\"><b>com</b></li><li class=\"navelem\"><a class=\"el\" href=\"namespacecom_1_1wandaprototype.html\">wandaprototype</a></li><li class=\"navelem\"><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_example_instrumented_test.html\">ExampleInstrumentedTest</a></li>  </ul>\r\n</div>\r\n</div><!-- top -->\r\n<div class=\"header\">\r\n  <div class=\"headertitle\"><div class=\"title\">com.wandaprototype.ExampleInstrumentedTest Member List</div></div>\r\n</div><!--header-->\r\n<div class=\"contents\">\r\n\r\n<p>This is the complete list of members for <a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_example_instrumented_test.html\">com.wandaprototype.ExampleInstrumentedTest</a>, including all inherited members.</p>\r\n<table class=\"directory\">\r\n  <tr bgcolor=\"#f0f0f0\" class=\"even\"><td class=\"entry\"><b>useAppContext</b>() (defined in <a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_example_instrumented_test.html\">com.wandaprototype.ExampleInstrumentedTest</a>)</td><td class=\"entry\"><a class=\"el\" href=\"classcom_1_1wandaprototype_1_1_example_instrumented_test.html\">com.wandaprototype.ExampleInstrumentedTest</a></td><td class=\"entry\"></td></tr>\r\n</table></div><!-- contents -->\r\n<!-- start footer part -->\r\n<hr class=\"footer\"/><address class=\"footer\"><small>\r\nGenerated by&#160;<a href=\"https://www.doxygen.org/index.html\"><img class=\"footer\" src=\"doxygen.svg\" width=\"104\" height=\"31\" alt=\"doxygen\"/></a> 1.9.4\r\n</small></address>\r\n</body>\r\n</html>\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test-members.html b/doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test-members.html
+---- a/doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test-members.html	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/doc/html/classcom_1_1wandaprototype_1_1_example_instrumented_test-members.html	(date 1654799668000)
+-@@ -66,13 +66,13 @@
+- </div>
+- </div><!-- top -->
+- <div class="header">
+--  <div class="headertitle"><div class="title">com.wandaprototype.ExampleInstrumentedTest Member List</div></div>
+-+  <div class="headertitle"><div class="title">com.wandaprototype.home_screen_Test Member List</div></div>
+- </div><!--header-->
+- <div class="contents">
+- 
+--<p>This is the complete list of members for <a class="el" href="classcom_1_1wandaprototype_1_1_example_instrumented_test.html">com.wandaprototype.ExampleInstrumentedTest</a>, including all inherited members.</p>
+-+<p>This is the complete list of members for <a class="el" href="classcom_1_1wandaprototype_1_1_example_instrumented_test.html">com.wandaprototype.home_screen_Test</a>, including all inherited members.</p>
+- <table class="directory">
+--  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>useAppContext</b>() (defined in <a class="el" href="classcom_1_1wandaprototype_1_1_example_instrumented_test.html">com.wandaprototype.ExampleInstrumentedTest</a>)</td><td class="entry"><a class="el" href="classcom_1_1wandaprototype_1_1_example_instrumented_test.html">com.wandaprototype.ExampleInstrumentedTest</a></td><td class="entry"></td></tr>
+-+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>useAppContext</b>() (defined in <a class="el" href="classcom_1_1wandaprototype_1_1_example_instrumented_test.html">com.wandaprototype.home_screen_Test</a>)</td><td class="entry"><a class="el" href="classcom_1_1wandaprototype_1_1_example_instrumented_test.html">com.wandaprototype.home_screen_Test</a></td><td class="entry"></td></tr>
+- </table></div><!-- contents -->
+- <!-- start footer part -->
+- <hr class="footer"/><address class="footer"><small>
+-Index: app/src/main/java/com/wandaprototype/android/MainActivity.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>package com.wandaprototype.android;\r\n\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.content.Context;\r\nimport android.content.res.Configuration;\r\nimport android.content.res.Resources;\r\nimport android.net.ConnectivityManager;\r\nimport android.net.NetworkInfo;\r\nimport android.os.AsyncTask;\r\nimport android.os.Build;\r\nimport android.os.Bundle;\r\nimport android.util.Log;\r\nimport android.view.View;\r\nimport android.widget.ArrayAdapter;\r\nimport android.widget.ListView;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.annotation.RequiresApi;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.mapbox.maps.MapView;\r\nimport com.mapbox.maps.Style;\r\nimport com.shrikanthravi.collapsiblecalendarview.data.Day;\r\nimport com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar;\r\nimport com.wandaprototype.R;\r\nimport com.wandaprototype.android.IaaS.information.db.DbManagerSSH;\r\nimport com.wandaprototype.android.PaaS.information.db.PartidoLab;\r\nimport com.wandaprototype.android.PaaS.information.db.PartidoVersionsLab;\r\nimport com.wandaprototype.android.dataformat.DameFecha;\r\nimport com.wandaprototype.android.objects.Partido;\r\nimport com.wandaprototype.android.objects.PartidoVersions;\r\n\r\nimport java.io.File;\r\nimport java.io.FileOutputStream;\r\nimport java.io.InputStream;\r\nimport java.sql.Date;\r\nimport java.sql.Timestamp;\r\nimport java.util.ArrayList;\r\nimport java.util.Arrays;\r\nimport java.util.List;\r\nimport java.util.StringTokenizer;\r\n\r\n/**\r\n * Pantalla inicial de datos. Puede cambiar en las\r\n * proximas versiones y pasar a ser refactorizada por\r\n * un nombre m&aacute;s adecuado.\r\n * Su funci&oacute;n es mostrar al usuario al entrar a la\r\n * aplicaci&oacute;n la informaci&oacute;n de forma directa.\r\n * TODO: Nuevas vistas.\r\n */\r\npublic class MainActivity extends AppCompatActivity {\r\n    //Fields\r\n    private TextView jornadaTextView;\r\n    private TextView equipolocalTextView;\r\n    private TextView vs_separadorTextView;\r\n    private TextView equipovisitanteTextView;\r\n    private TextView fechaTextView;\r\n    private TextView hora_separador_TextView;\r\n    private TextView horaTextView;\r\n\r\n    Context context = this;\r\n\r\n    //ListView Adapter UI\r\n    private ArrayAdapter<String> adapter;\r\n\r\n    //Room\r\n    //Tabla Partido\r\n    private PartidoLab mPartidoLab;\r\n    private Partido mPartido;\r\n\r\n    //Tabla PartidoVersions\r\n    private PartidoVersionsLab mPartidoVersionsLab;\r\n    private PartidoVersions mPartidoVersions;\r\n\r\n    @SuppressLint({\"ResourceAsColor\", \"ResourceType\"})\r\n    @RequiresApi(api = Build.VERSION_CODES.O)\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        /*\r\n          Configuración ToolBar.\r\n          Toolbar personalizado y estilizado.\r\n         */\r\n        setSupportActionBar(findViewById(R.id.myToolbar));\r\n\r\n        /*\r\n          Instancia de Tablas correspondientes a usar\r\n          en esta actividad de Android:\r\n          Partidos ==> Si cambia de estadio se utiliza el mismo.\r\n          PartidosVersiones ==> Misma acción.\r\n         */\r\n        mPartidoLab = PartidoLab.get(MainActivity.this);\r\n        mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);\r\n\r\n        /*\r\n          Instancia una lista de elementos, permite añadir a la lista información\r\n          de los eventos que tengamos disponibles.\r\n          Aplica cambios en la lista notificando que los datos han cambiando al adaptador.\r\n         */\r\n        ListView listView = findViewById(R.id.listv);\r\n        String[] items = {};\r\n        //Arrays : Elementos listados\r\n        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(items));\r\n        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, arrayList);\r\n        listView.setAdapter(adapter);\r\n        adapter.notifyDataSetChanged();\r\n\r\n        /*\r\n          Instancia y carga de MapBox, sustituye actualmente a GoogleMaps.\r\n          Permite establecer configuraciones y cambiar estilo de mapa.\r\n          TODO: Cambiar mapa a modo oscuro cuando se active la opción en el SO.\r\n         */\r\n        MapView mapView = findViewById(R.id.mapView);\r\n\r\n\r\n        /*\r\n          Instancia CalendarView, permite manejar eventos tras realizar ciertas acciones\r\n          en la aplicación e interactuando con el mismo.\r\n         */\r\n        final CollapsibleCalendar collapsibleCalendar = findViewById(R.id.calendarView);\r\n        collapsibleCalendar.setCalendarListener(new CollapsibleCalendar.CalendarListener() {\r\n\r\n            @Override\r\n            public void onItemClick(@NonNull View view) {\r\n            }\r\n\r\n            @Override\r\n            public void onDayChanged() {\r\n            }\r\n\r\n            @Override\r\n            public void onClickListener() {\r\n            }\r\n\r\n            @Override\r\n            public void onDaySelect() {\r\n                Day day = collapsibleCalendar.getSelectedDay();\r\n                assert day != null;\r\n                Log.i(getClass().getName(), \"Selected Day: \"\r\n                        + day.getYear() + \"/\" + (day.getMonth() + 1) + \"/\" + day.getDay());\r\n            }\r\n\r\n            public void onDataUpdate() {\r\n            }\r\n\r\n            public void onMonthChange() {\r\n            }\r\n\r\n            public void onWeekChange(int i) {\r\n            }\r\n        });\r\n\r\n        /**\r\n         * Establece configuraciones de componentes si modos de\r\n         * \"Modo nocturno\" DarkMode está activado o no.\r\n         * @author. Android stackoverflow\r\n         */\r\n        int currentNightMode = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;\r\n        switch (currentNightMode) {\r\n            case Configuration.UI_MODE_NIGHT_NO:\r\n                // Night mode is not active on device\r\n                mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_DAY);\r\n                break;\r\n            case Configuration.UI_MODE_NIGHT_YES:\r\n                // Night mode is active on device\r\n                mapView.getMapboxMap().loadStyleUri(Style.TRAFFIC_NIGHT);\r\n                break;\r\n        }\r\n\r\n    }\r\n\r\n\r\n    /**\r\n     * Ciclos de vida del módulo de mapa: MapBox.\r\n     * Permite la llamada a funciones o acciones\r\n     * en los ciclos correspondientes.\r\n     */\r\n    @Override\r\n    public void onStart() {\r\n        super.onStart();\r\n    }\r\n\r\n    @Override\r\n    public void onLowMemory() {\r\n        super.onLowMemory();\r\n    }\r\n\r\n    @Override\r\n    public void onDestroy() {\r\n        super.onDestroy();\r\n    }\r\n\r\n\r\n    /**\r\n     * Se inicia el uso del flujo principal de la aplicación.\r\n     * Especifica y relaciona los Textviews con las variables\r\n     * asociadas.\r\n     */\r\n    @SuppressLint(\"WrongConstant\")\r\n    @RequiresApi(api = Build.VERSION_CODES.O)\r\n    @Override\r\n    protected void onPostCreate(@Nullable Bundle savedInstanceState) {\r\n        super.onPostCreate(savedInstanceState);\r\n        jornadaTextView = findViewById(R.id.jornada);\r\n        equipolocalTextView = findViewById(R.id.equipoLocal);\r\n        vs_separadorTextView = findViewById(R.id.vs_separador);\r\n        equipovisitanteTextView = findViewById(R.id.equipoVisitante);\r\n        fechaTextView = findViewById(R.id.fecha);\r\n        hora_separador_TextView = findViewById(R.id.hora_separador);\r\n        horaTextView = findViewById(R.id.hora);\r\n        FlujoPrincipal();\r\n\r\n    }\r\n\r\n    /**\r\n     * Podemos utilizar onStop para finalizar todas las comunicaciones\r\n     * o eliminar archivos en memoria caché.\r\n     */\r\n    @RequiresApi(api = Build.VERSION_CODES.O)\r\n    @Override\r\n    protected void onStop() {\r\n        super.onStop();\r\n    }\r\n\r\n\r\n    /**\r\n     * Utilizamos onResume para cargar de nuevos los datos, realizaremos el procedimiento inicial\r\n     * para comprobar actualizaciones de los datos respetando si existe una conexión/ entre otros\r\n     * bloques para su funcionamiento\r\n     * TODO: Realizar funciones con onRestart\r\n     */\r\n    @Override\r\n    protected void onResume() {\r\n        super.onResume();\r\n    }\r\n\r\n    @Override\r\n    protected void onApplyThemeResource(Resources.Theme theme, int resid, boolean first) {\r\n        super.onApplyThemeResource(theme, resid, first);\r\n    }\r\n\r\n    /**\r\n     * Recopila información de servidor mediante un tunel seguro SSH.\r\n     * Realiza las consultas correspondientes.\r\n     * ¡Atención, no finaliza la conexión ni el tunel SSH!\r\n     */\r\n    private void RetrieveDatafromServer() {\r\n        AsyncTask.execute(() -> {\r\n            try {\r\n                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {\r\n\r\n                    /*\r\n                      Recopila el archivo /ssh.key de la carpeta assets paquete interno:\r\n                      TODO: Debe encriptarlo internamente.\r\n                      Si no existe lo crea y gurada en cache:\r\n                     */\r\n                    String path;\r\n                    File f = new File(getCacheDir() + \"/ssh.key\");\r\n                    if (!f.exists()) {\r\n                        try {\r\n                            InputStream is = getAssets().open(\"ssh.key\");\r\n                            int size = is.available();\r\n                            byte[] buffer = new byte[size];\r\n                            is.read(buffer);\r\n                            is.close();\r\n\r\n                            FileOutputStream fos = new FileOutputStream(f);\r\n                            fos.write(buffer);\r\n                            //path = f.getPath();\r\n                            fos.close();\r\n                        } catch (Exception e) {\r\n                            Log.e(\"WandaPrototype [ERROR]\", \"No se puede leer el fichero/permisos/localización\");\r\n                            throw new RuntimeException(e);\r\n                        }\r\n                    }\r\n\r\n                    path = f.getPath();\r\n                    Log.i(\"WandaPrototype [INFO]\", \"Ruta de información de la clave privada: \" + path);\r\n                    new DbManagerSSH().checkConnection(path);\r\n\r\n                        /*\r\n                          Añadimos punto de control:\r\n                          Comprobamos si mi versión local contiene la ultima versión\r\n                          de partidosVersions interna y externa.\r\n                          Si no contiene ninguna versión procedemos a obtener los datos.\r\n\r\n                          TODO: Debe borrar calendario para evitar confusiones.!!!!\r\n                         */\r\n                    mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);\r\n                    List<PartidoVersions> partidosVersions = mPartidoVersionsLab.getPartidoVersionDao();\r\n                    if (\r\n                            PartidoVersions.partidosVersions.size() <= 0 ||\r\n                                    new DbManagerSSH().ComprobarUltimaVersion(\r\n                                            Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), \"wandametropolitano_versions\")\r\n                    ) {\r\n                        mPartidoLab.setPartidosNuke();\r\n                        new DbManagerSSH().DefinirObjetoPartido(\"wandametropolitano_partidos\");\r\n                        //TODO: Comprobar porque al recoger la versión más reciente con valor nulo, no crashea la App.\r\n                        //TODO: Limpia versiones si tabla de la bbdd externa ha sido formateada.\r\n                        if (partidosVersions.size() <= 0 || partidosVersions.get(partidosVersions.size() - 1).version_number >\r\n                                new DbManagerSSH().getUltimaNVersion(\r\n                                        Timestamp.valueOf(partidosVersions.get(partidosVersions.size() - 1).version_date), \"wandametropolitano_versions\")\r\n                        ) {\r\n                            mPartidoVersionsLab.setPartidoVersionsNuke();\r\n                        }\r\n\r\n                        new DbManagerSSH().DefinirObjetoPartidoVersiones(\"wandametropolitano_versions\");\r\n\r\n                            /*\r\n                              Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.\r\n                              En Pruebas.\r\n                             */\r\n                        mPartidoLab = PartidoLab.get(MainActivity.this);\r\n                        for (int i = 0; i < Partido.partidos.size(); i++) {\r\n                            System.out.println(Partido.partidos.get(i));\r\n                            if (mPartidoLab.isDataExist(Partido.partidos.get(i).id_partido) == 0) {\r\n                                mPartido = new Partido();\r\n                                mPartido.setId_partido(Partido.partidos.get(i).id_partido);\r\n                                mPartido.setCompeticion(Partido.partidos.get(i).competicion);\r\n                                mPartido.setEquipolocal(Partido.partidos.get(i).equipolocal);\r\n                                mPartido.setEquipovisitante(Partido.partidos.get(i).equipovisitante);\r\n                                mPartido.setJornada(Partido.partidos.get(i).jornada);\r\n                                mPartido.setFechapartido(Partido.partidos.get(i).fechapartido);\r\n                                mPartido.setHorapartido(Partido.partidos.get(i).horapartido);\r\n                                mPartido.setEstadiopartido(Partido.partidos.get(i).estadiopartido);\r\n                                mPartidoLab.addPartido(mPartido);\r\n                            }\r\n                        }\r\n\r\n                            /*\r\n                              Transfiere los datos del ArrayList de Partidos a objeto DAO de partidos.\r\n                              En Pruebas.\r\n                             */\r\n                        for (int i = 0; i < PartidoVersions.partidosVersions.size(); i++) {\r\n                            mPartidoVersions = new PartidoVersions();\r\n                            mPartidoVersions.setVersion_number(PartidoVersions.partidosVersions.get(i).version_number);\r\n                            mPartidoVersions.setVersion_date(PartidoVersions.partidosVersions.get(i).version_date);\r\n                            mPartidoVersionsLab.addPartidoVersions(mPartidoVersions);\r\n                        }\r\n\r\n                            /*\r\n                              Limpia y elimina lo lista y datos en el calendario\r\n                             */\r\n                        ReloadListView();\r\n\r\n                            /*\r\n                              Una vez finalice las tareas anteriores es necesario\r\n                              llamar a las funciones para actualizar los datos\r\n                              antes de finalizar el hilo de fondo.\r\n                             */\r\n                        RetrieveUIData();\r\n\r\n                    } else {\r\n                        Log.i(\"WandaPrototype [INFO]\", \"No se han encontrado versiones nuevas\");\r\n                        Log.i(\"WandaPrototype [INFO]\", String.valueOf(partidosVersions));\r\n                        System.out.println(\"Información Extra: \" + partidosVersions.get(partidosVersions.size() - 1).version_number);\r\n\r\n                        ReloadListView();\r\n                        RetrieveUIData();\r\n                    }\r\n\r\n                        /*\r\n                          Cierra todas las conexiones. En caso de restaurar la App. No permite\r\n                          reutilizar el mismo canal SSH.\r\n                          TODO: Mantener SSH activo hasta finalizar App.\r\n                         */\r\n                    DbManagerSSH.CloseDataBaseConnection();\r\n                    DbManagerSSH.CloseSSHConnection();\r\n\r\n                    //} else {\r\n                    //Log.e(\"WandaPrototype [ERROR]\", \"No existe el archivo .key\");\r\n                    //Log.e(\"WandaPrototype [ERROR]\", String.valueOf(\"Ruta de información de la clave privada: \"+path));\r\n                    //throw new Exception(\"El archivo de acceso .key no existe\");\r\n                    //}\r\n                } else {\r\n                    Log.e(\"WandaPrototype [ERROR]\", \"Build.VERSION.SDK Es menor que el sistema\");\r\n                    throw new Exception(\"La versión SDK está desactualizada\");\r\n                }\r\n            } catch (Exception e) {\r\n                e.printStackTrace();\r\n                Log.i(\"WandaPrototype [ERROR]\", \"Error durante el procesado de datos\");\r\n            }\r\n        });\r\n    }\r\n\r\n    @RequiresApi(api = Build.VERSION_CODES.O)\r\n    public void RetrieveUIData() {\r\n        runOnUiThread(() -> {\r\n            //TODO: Observador en el cambio de la información.\r\n            //TODO: https://medium.com/mindorks/using-room-database-with-livedata-android-jetpack-cbf89b677b47\r\n            //TODO: https://developer.android.com/topic/libraries/architecture/livedata?hl=es-419\r\n\r\n            //Si no se estancian al comenzar la actividad. Devuelve valor nulo.\r\n            mPartidoLab = PartidoLab.get(MainActivity.this);\r\n            mPartidoVersionsLab = PartidoVersionsLab.get(MainActivity.this);\r\n            if (!(mPartidoLab.getMoreRecentPartidos_limit6().isEmpty())) {\r\n                MostrarDatosRecientes();\r\n                MostrarDatosLista();\r\n                MostrarDatosCalendario();\r\n                System.out.println(mPartidoVersionsLab.getPartidoVersionDao());\r\n                System.out.println(adapter);\r\n            } else {\r\n                jornadaTextView.setText(\"\");\r\n                equipolocalTextView.setText(context.getResources().getString(R.string.error_messages_002));\r\n                vs_separadorTextView.setText(\"\");\r\n                equipovisitanteTextView.setText(\"\");\r\n                fechaTextView.setText(\"\");\r\n                hora_separador_TextView.setText(\"\");\r\n                horaTextView.setText(\"\");\r\n            }\r\n        });\r\n\r\n    }\r\n\r\n\r\n    /**\r\n     * Flujo caso 1: Comprueba si tienes conexión.\r\n     * -> ¿Tienes datos locales?\r\n     * - Recopila los datos nuevos, Muestra los nuevos datos locales, si no...\r\n     * -> Muestra datos locales -> Comprueba versión de los datos -> Actualiza bbbdd_interna\r\n     * -> Muestra los nuevos datos locales\r\n     * <p>\r\n     * Flujo caso 2: No tienes conexión.\r\n     * -> ¿Tienes datos locales?\r\n     * -> Muestra datos locales else\r\n     * - Muestra error y permite al usuario volver a intentar la conexión. (Bucle/Salir ).\r\n     * <p>\r\n     * TODO: Añadir casos de flujo de errores internos.\r\n     */\r\n    @RequiresApi(api = Build.VERSION_CODES.O)\r\n    public void FlujoPrincipal() {\r\n        mPartidoLab = PartidoLab.get(MainActivity.this);\r\n        if (isNetworkAvailable()) {\r\n            if (isEmptyPartidos()) {\r\n                //TODO: Debe abrir un único canal SSH o cerrar la conexión.\r\n                //TODO: No recarga los datos bucar medio.\r\n                //TODO: Debe formatear la tabla.\r\n                MostrarSinDatosConConexion();\r\n                RetrieveDatafromServer();\r\n            } else {\r\n                //TODO: Debe abrir un único canal SSH o cerrar la conexión.\r\n                //TODO: No recarga los datos bucar medio.\r\n                //TODO: Debe formatear la tabla.\r\n                RetrieveUIData();\r\n                RetrieveDatafromServer();\r\n            }\r\n        } else {\r\n            if (isEmptyPartidos()) {\r\n                MostrarSinDatos();\r\n            } else {\r\n                MostrarDatosRecientes();\r\n                MostrarDatosLista();\r\n                MostrarDatosCalendario();\r\n            }\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Comprueba la conexión del cliente a través de los servicios de conectividad de Android.\r\n     * Ya sean servicios que permitan recibir acceso a internet mediante Wifi ó datos moviles.\r\n     * TODO: Probar que funciona conectado a redes sin acceso a internet.\r\n     *\r\n     * @return Devuelve el estado de la red, false=No hay conexión y true= Si hay Conexión.\r\n     */\r\n    private boolean isNetworkAvailable() {\r\n        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);\r\n        @SuppressLint(\"MissingPermission\") NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();\r\n        return activeNetworkInfo != null && activeNetworkInfo.isConnected();\r\n    }\r\n\r\n    /**\r\n     * Comprueba que la base de datos no se encuentre vacia.\r\n     * Obtiene el número de elementos en su interior. Si\r\n     * devuelve un número mayor a 1, se considerará \"no vacia\".\r\n     *\r\n     * @return Vacia si devuelve true. Con datos si devuelve false.\r\n     */\r\n    public Boolean isEmptyPartidos() {\r\n        boolean output;\r\n        mPartidoLab = PartidoLab.get(MainActivity.this);\r\n        List<Partido> partidos_tabla_local = mPartidoLab.getPartidos();\r\n        output = partidos_tabla_local.size() <= 0;\r\n        return output;\r\n    }\r\n\r\n    /**\r\n     * Establece la información en los campos Textview, recopilando los datos\r\n     * de la base de datos local interna.\r\n     * SI la información recopilada no contiene ningún dato resulta en error\r\n     * de valor nulo. Comprobamos esta información y si se encuentra vacia,\r\n     * devolvemos un mensaje indicando que no hay ningun evento cercano.\r\n     */\r\n    @RequiresApi(api = Build.VERSION_CODES.O)\r\n    public void MostrarDatosRecientes() {\r\n        //mPartidoLab = PartidoLab.get(MainActivity.this);\r\n        System.out.println(\"Último partido actual: \" + mPartidoLab.getMoreRecentPartidos_limit6());\r\n        System.out.println(mPartidoLab.getPartidos());\r\n\r\n        Partido partidos = mPartidoLab.getMoreRecentPartido();\r\n        if (mPartidoLab.getMoreRecentPartido() != null) {\r\n            jornadaTextView.setText(partidos.getJornada());\r\n            equipolocalTextView.setText(partidos.equipolocal);\r\n            vs_separadorTextView.setText(context.getResources().getString(R.string.event_information_VS));\r\n            equipovisitanteTextView.setText(partidos.equipovisitante);\r\n            fechaTextView.setText(String.valueOf(new DameFecha().dameDateAqui(Date.valueOf(partidos.fechapartido))));\r\n            hora_separador_TextView.setText(context.getResources().getString(R.string.event_information_AT));\r\n            horaTextView.setText(partidos.horapartido);\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Establece la información en los campos Textview.\r\n     * Detalle de posible error detectado, según flujo de funcionamiento.\r\n     */\r\n    @RequiresApi(api = Build.VERSION_CODES.O)\r\n    public void MostrarSinDatos() {\r\n        jornadaTextView.setText(\"\");\r\n        equipolocalTextView.setText(context.getResources().getString(R.string.error_messages_001));\r\n        vs_separadorTextView.setText(\"\");\r\n        equipovisitanteTextView.setText(\"\");\r\n        fechaTextView.setText(\"\");\r\n        hora_separador_TextView.setText(\"\");\r\n        horaTextView.setText(\"\");\r\n    }\r\n\r\n    /**\r\n     * Establece la información en los campos Textview.\r\n     * Detalle de posible error detectado, según flujo de funcionamiento.\r\n     */\r\n    @RequiresApi(api = Build.VERSION_CODES.O)\r\n    public void MostrarSinDatosConConexion() {\r\n        jornadaTextView.setText(\"\");\r\n        equipolocalTextView.setText(context.getResources().getString(R.string.error_messages_003));\r\n        vs_separadorTextView.setText(\"\");\r\n        equipovisitanteTextView.setText(\"\");\r\n        fechaTextView.setText(\"\");\r\n        hora_separador_TextView.setText(\"\");\r\n        horaTextView.setText(\"\");\r\n    }\r\n\r\n    /**\r\n     * Obtiene los elementos de la base de datos interna, realizando\r\n     * consultas que obtienen los partidos mas recientes de hasta un\r\n     * limite de 3 para el listado.\r\n     * TODO: Comprobar que ocurre al poner más elementos en la lista.\r\n     */\r\n    public void MostrarDatosLista() {\r\n        mPartidoLab = PartidoLab.get(MainActivity.this);\r\n        List<Partido> partidos_sel3 = mPartidoLab.getMoreRecentPartidos_limit3();\r\n        for (int i = 0; i < partidos_sel3.size(); i++) {\r\n            adapter.add(\r\n                    /*\r\n                    partidos_sel3.get(i).fechapartido + \" | \"\r\n                            + partidos_sel3.get(i).competicion + \" | \"\r\n                            + partidos_sel3.get(i).jornada);\r\n                    */\r\n                    partidos_sel3.get(i).competicion + \" | \"\r\n                            + partidos_sel3.get(i).fechapartido + \" | \"\r\n                            + partidos_sel3.get(i).horapartido);\r\n        }\r\n        adapter.notifyDataSetChanged();\r\n    }\r\n\r\n    /**\r\n     * Obtiene los elementos de la base de datos interna, realizando\r\n     * consultas que obtienen los partidos mas recientes de hasta un\r\n     * limite de 6 para marcar los partidos en el calendario.\r\n     * TODO: Comprobar que ocurre al poner más elementos en el calendario.\r\n     */\r\n    public void MostrarDatosCalendario() {\r\n        mPartidoLab = PartidoLab.get(MainActivity.this);\r\n        List<Partido> partidos_sel6 = mPartidoLab.getMoreRecentPartidos_limit6();\r\n        for (int i = 0; i < partidos_sel6.size(); i++) {\r\n            StringTokenizer st = new StringTokenizer(partidos_sel6.get(i).fechapartido, \"-\");\r\n            String anho = st.nextToken();\r\n            String mes = st.nextToken();\r\n            String dia = st.nextToken();\r\n            final CollapsibleCalendar collapsibleCalendar = findViewById(R.id.calendarView);\r\n            collapsibleCalendar.addEventTag(Integer.parseInt(anho), Integer.parseInt(mes) - 1, Integer.parseInt(dia));\r\n        }\r\n        adapter.notifyDataSetChanged();\r\n    }\r\n\r\n    /**\r\n     * Realiza la limpieza de los listas\r\n     * los elementos antiguos o recargados\r\n     * se proceden a eliminar. Con la\r\n     * acción de proporcionar nueva\r\n     * información.\r\n     * TODO: Días del calendario antiguos no se quitan ojo!\r\n     */\r\n    public void ReloadListView() {\r\n        runOnUiThread(() -> {\r\n            // Stuff that updates the UI\r\n            adapter.clear();\r\n            adapter.notifyDataSetChanged();\r\n        });\r\n\r\n\r\n    }\r\n\r\n}
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/app/src/main/java/com/wandaprototype/android/MainActivity.java b/app/src/main/java/com/wandaprototype/android/MainActivity.java
+---- a/app/src/main/java/com/wandaprototype/android/MainActivity.java	(revision b590cc15d66290f990ea118efb71d41896065313)
+-+++ b/app/src/main/java/com/wandaprototype/android/MainActivity.java	(date 1655303650591)
+-@@ -60,6 +60,7 @@
+-     private TextView fechaTextView;
+-     private TextView hora_separador_TextView;
+-     private TextView horaTextView;
+-+    private TextView versionTextView;
+- 
+-     Context context = this;
+- 

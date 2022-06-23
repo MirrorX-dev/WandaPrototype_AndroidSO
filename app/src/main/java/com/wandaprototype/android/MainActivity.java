@@ -631,8 +631,6 @@ public class MainActivity extends AppCompatActivity {
             adapter.clear();
             adapter.notifyDataSetChanged();
         });
-
-
     }
 
 }
